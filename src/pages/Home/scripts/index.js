@@ -35,6 +35,23 @@ const aiPrompt = (element) => {
   element.textContent = `VoltAi, para que você (${questionName}) saiba mais sobre '${questionCar}'`;
 };
 
+const slideShow = (slider, imagesName, actualImage = 0, timeout = false) => {
+  if (slider && imagesName) {
+    if (timeout) {
+      if (imagesName.length == actualImage) {
+        actualImage = 0
+      }
 
+      slider.src = `../../../public/assets/images/${imagesName[actualImage]}`
+    }
+  }
+
+  console.log(slider)
+
+  setTimeout(() => {
+    slideShow(slider, imagesName, (actualImage + 1), true);
+  }, 3000)
+}
 
 ai.addEventListener("click", () => {aiPrompt(aiSubtitle)});
+slideShow(homeSlider, ["Home-image.png", "About-image.png"]); // activate slide show
