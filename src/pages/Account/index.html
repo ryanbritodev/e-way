@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Way - Account</title>
+    <meta name="description" content="E-way, Notícias, Stats, História." />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="shortcut icon" href="" type="icon" />
+  </head>
+  <body>
+    <main class="container-main">
+      <header class="main__header">
+        <div class="header__clickables">
+          <a href="#eway" class="clickables__link">E-Way</a>
+        </div>
+      </header>
+      <section class="main__home" id="home">
+        <h1 class="home__title title">Notícias. Stats. Histórias.</h1>
+        <h2 class="home__subtitle subtitle">Tudo em um só lugar</h2>
+        <form  class="home__account-card">
+          <label for="name">Nome</label>
+          <input type="text" class="account-card__input" id="name" required/>
+          <label for="email">Email</label>
+          <input type="email" class="account-card__input" id="email" required/>
+          <label for="password">Password</label>
+          <input type="password" class="account-card__input" id="password" required/>
+          <button class="account-card__button button">Criar conta</button>
+        </form>
+      </section>
+      <footer class="main__footer">
+        <img
+          src="../../../public/assets/images/E-way-Logomarca-icon.svg"
+          alt="E-way logo"
+          class="footer__logo"
+        />
+        <div class="footer__info">
+          <p class="info__title">E-Way</p>
+          <p class="info__subtitle">Copyright&copy;2024</p>
+        </div>
+        <div class="footer__social-media">
+          <a
+            href="https://facebook.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="social-media__link"
+            ><img
+              src="../../../public/assets/images/Facebook-icon.svg"
+              alt="Facebook"
+              class="link__image"
+          /></a>
+          <a
+            href="https://linkedin.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="social-media__link"
+            ><img
+              src="../../../public/assets/images/Linkedin-icon.svg"
+              alt="Linkedin"
+              class="link__image"
+          /></a>
+          <a
+            href="https://youtube.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="social-media__link"
+            ><img
+              src="../../../public/assets/images/Youtube-icon.svg"
+              alt="Youtube"
+              class="link__image"
+          /></a>
+          <a
+            href="https://youtube.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="social-media__link"
+            ><img
+              src="../../../public/assets/images/Instagram-icon.svg"
+              alt="Instagram"
+              class="link__image"
+          /></a>
+        </div>
+      </footer>
+    </main>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

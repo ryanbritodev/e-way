@@ -60,6 +60,9 @@ body {
 .content {
   color: var(--light-black);
 }
+.slider {
+  height: 22em;
+}
 
 /*---- STYLES ----*/
 .container-main {
@@ -116,7 +119,6 @@ body {
 }
 .home__image {
   width: 50em;
-  height: 22em;
 }
 .main__about {
   padding-top: 8em;
