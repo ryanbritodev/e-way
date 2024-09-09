@@ -1,30 +1,34 @@
+import styles from "../../styles/Header.module.css";
+
 export const Header = () => {
   return (
-    <header className="main__header">
+    <header className={styles['main__header']}>
       <img
         src="/assets/images/landing/E-way-Logomarca-icon.svg"
         alt="Eway"
-        className="header__icon"
+        className={styles['header__icon']}
         id="#home"
       />
-      <div className="header__clickables">
-        <a href="#about" className="clickables__link">
+      <div className={styles['header__clickables']}>
+        <a href="#about" className={styles['clickables__link']}>
           Sobre
         </a>
-        <a href="#collectibles" className="clickables__link">
+        <a href="#collectibles" className={styles['clickables__link']}>
           Colecionáveis
         </a>
-        <a href="#assistent" className="clickables__link">
+        <a href="#assistent" className={styles['clickables__link']}>
           VoltAI
         </a>
-        <a href="#eway" className="clickables__link">
+        <a href="#eway" className={styles['clickables__link']}>
           E-Way
         </a>
         <a
           href="../Account/index.html"
-          className="clickables__link button-link"
+          className={`${styles['clickables__link']} ${styles['button-link']}`}
         >
-          <button className="clickables__button button">Entrar</button>
+          <button className={`${styles['clickables__button']} ${styles['button']}`}>
+            Entrar
+          </button>
         </a>
       </div>
     </header>
