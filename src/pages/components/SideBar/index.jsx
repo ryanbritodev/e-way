@@ -4,7 +4,7 @@ export const SideBar = ({ links }) => {
   const { pathname } = useLocation();
 
   return (
-    <aside className="absolute sm:flex xl:relative align-self-left z-50 top-0 left-0 w-full max-w-[5em] md:max-w-[6em] h-full bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_30px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
+    <aside className="absolute sm:flex xl:relative align-self-left z-50 top-0 left-0 w-full max-w-[5em] md:max-w-[6em] h-full max-h-fit-content bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_30px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
       <img
         src="/assets/images/sideBar/ewayLogo.png"
         alt="Eway Logo"
