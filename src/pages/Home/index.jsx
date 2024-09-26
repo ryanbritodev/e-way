@@ -41,10 +41,10 @@ export const Home = () => {
             <h2 className="text-2xl font-bold mb-[.5em]">Notícia rápida</h2>
             <News.Root backgroundImageUrl="/assets/images/home/principalNews.png">
               <News.Partner partner="CNN"/>
-              <News.Type />
-              <News.Title />
-              <News.SeeMore />
-              <News.Time />
+              <News.Type newsType="Notícia" />
+              <News.Title title="Mahindra acaba de perder mais uma"/>
+              <News.SeeMore link="/" text="Ver mais"/>
+              <News.Time time="Hoje..."/>
             </News.Root>
           </div>
         </div>
