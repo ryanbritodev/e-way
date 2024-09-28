@@ -7,9 +7,10 @@
         "detailsPage": {
             "fullName": "Mahindra Racing",
             "fullLogoImg": "/assets/images/teams/fullLogos/mahindra_full_logo.svg",
-            "carTeam": "/assets/images/teams/cars/Mahindra M10Electro",
+            "carTeam": "/assets/images/teams/cars/mahindra_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/edoardo_mortara.png",
                     "pilotFirstName": "Edoardo",
                     "pilotLastName": "Mortara",
@@ -18,6 +19,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/nyck_de_vries.png",
                     "pilotFirstName": "Nyck",
                     "pilotLastName": "De Vries",
@@ -40,10 +42,11 @@
         "colorButton": "#C3002F",
         "detailsPage": {
             "fullName": "Nissan Formula E Team",
-            "fullLogoImg": "nissan_full_logo.svg",
+            "fullLogoImg": "/assets/images/teams/fullLogos/nissan_full_logo.svg",
             "carTeam": "/assets/images/teams/cars/nissan_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/oliver_rowland.png",
                     "pilotFirstName": "Oliver",
                     "pilotLastName": "Rowland",
@@ -52,6 +55,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/sacha_fenestraz.png",
                     "pilotFirstName": "Sacha",
                     "pilotLastName": "Fenestraz",
@@ -78,6 +82,7 @@
             "carTeam": "/assets/images/teams/cars/neom_mclaren_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/jake_hughes.png",
                     "pilotFirstName": "Jake",
                     "pilotLastName": "Hughes",
@@ -86,6 +91,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/sam_bird.png",
                     "pilotFirstName": "Sam",
                     "pilotLastName": "Bird",
@@ -112,6 +118,7 @@
             "carTeam": "/assets/images/teams/cars/maserati_msg_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/jehan_darvula.png",
                     "pilotFirstName": "Jehan",
                     "pilotLastName": "Darvula",
@@ -120,6 +127,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/india_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/maximilian_gunther.png",
                     "pilotFirstName": "Maximilian",
                     "pilotLastName": "Günther",
@@ -146,6 +154,7 @@
             "carTeam": "/assets/images/teams/cars/ds_penske_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/jean_eric_vergne.png",
                     "pilotFirstName": "Jean-Éric",
                     "pilotLastName": "Vergne",
@@ -154,6 +163,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/france_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/stoffel_vandoorne.png",
                     "pilotFirstName": "Stoffel",
                     "pilotLastName": "Vandoorne",
@@ -180,6 +190,7 @@
             "carTeam": "/assets/images/teams/cars/andretti_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/jack_dennis.png",
                     "pilotFirstName": "Jack",
                     "pilotLastName": "Dennis",
@@ -188,6 +199,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/norman_nato.png",
                     "pilotFirstName": "Norman",
                     "pilotLastName": "Nato",
@@ -214,6 +226,7 @@
             "carTeam": "/assets/images/teams/cars/abt_cupra_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/nico_muller.png",
                     "pilotFirstName": "Nico",
                     "pilotLastName": "Müller",
@@ -222,6 +235,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/lucas_di_grassi.png",
                     "pilotFirstName": "Lucas",
                     "pilotLastName": "Di Grassi",
@@ -248,6 +262,7 @@
             "carTeam": "/assets/images/teams/cars/jaguar_tcs_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/mitch_evans.png",
                     "pilotFirstName": "Mitch",
                     "pilotLastName": "Evans",
@@ -256,11 +271,12 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/new_zealand_flag.svg"
                 },
                 {
-                    "pilotPicture": "/assets/images/teams/racers/mitch_evans.png",
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/nick_cassidy.png",
                     "pilotFirstName": "Nick",
                     "pilotLastName": "Cassidy",
                     "pilotNumber": "37",
-                    "pilotCountryName": "New Zealand",
+                    "pilotCountryName": "Nova Zelândia",
                     "pilotCountryFlag": "/assets/images/teams/flags/new_zealand_flag.svg"
                 }
             ],
@@ -282,6 +298,7 @@
             "carTeam": "/assets/images/teams/cars/ert_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/dan_ticktum.png",
                     "pilotFirstName": "Dan",
                     "pilotLastName": "Ticktum",
@@ -290,6 +307,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/sergio_sette_camara.png",
                     "pilotFirstName": "Sérgio",
                     "pilotLastName": "Sette Câmara",
@@ -316,6 +334,7 @@
             "carTeam": "/assets/images/teams/cars/envision_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/sebastien_buemi.png",
                     "pilotFirstName": "Sébastien",
                     "pilotLastName": "Buemi",
@@ -324,6 +343,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/robin_frijins.png",
                     "pilotFirstName": "Robin",
                     "pilotLastName": "Frijins",
@@ -350,6 +370,7 @@
             "carTeam": "/assets/images/teams/cars/tag_heuer_porsche_car.svg",
             "pilots": [
                 {
+                    "pilotId": 1,
                     "pilotPicture": "/assets/images/teams/racers/pascal_wehrlein.png",
                     "pilotFirstName": "Pascal",
                     "pilotLastName": "Wehrlein",
@@ -358,6 +379,7 @@
                     "pilotCountryFlag": "/assets/images/teams/flags/germany_flag.svg"
                 },
                 {
+                    "pilotId": 2,
                     "pilotPicture": "/assets/images/teams/racers/antonio_da_costa.png",
                     "pilotFirstName": "António Félix",
                     "pilotLastName": "Da Costa",
