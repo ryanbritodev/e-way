@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "name": "TAG Heuer Porsche",
-        "logo": "/assets/images/teams/btnLogos/tag_heuer_porsche_logo.svg",
-        "colorButton": "#D5001C",
+        "name": "Mahindra",
+        "logo": "/assets/images/teams/btnLogos/mahindra_logo.svg",
+        "colorButton": "#DD052B",
         "detailsPage": {
-            "fullName": "TAG Heuer Porsche",
-            "fullLogoImg": "/assets/images/teams/fullLogos/tag_heuer_porsche_full_logo.svg",
-            "carTeam": "/assets/images/teams/cars/tag_heuer_porsche_car.svg",
+            "fullName": "Mahindra Racing",
+            "fullLogoImg": "/assets/images/teams/fullLogos/mahindra_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/Mahindra M10Electro",
             "pilots": [
                 {
-                    "pilotPicture": "/assets/images/teams/racers/pascal_wehrlein.png",
-                    "pilotFirstName": "Pascal",
-                    "pilotLastName": "Wehrlein",
-                    "pilotNumber": "94",
-                    "pilotCountryName": "Alemanha",
-                    "pilotCountryFlag": "/assets/images/teams/flags/germany_flag.svg"
+                    "pilotPicture": "/assets/images/teams/racers/edoardo_mortara.png",
+                    "pilotFirstName": "Edoardo",
+                    "pilotLastName": "Mortara",
+                    "pilotNumber": "48",
+                    "pilotCountryName": "Suíça",
+                    "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
                 },
                 {
-                    "pilotPicture": "/assets/images/teams/racers/antonio_da_costa.png",
-                    "pilotFirstName": "António Félix",
-                    "pilotLastName": "Da Costa",
-                    "pilotNumber": "13",
-                    "pilotCountryName": "Portugal",
-                    "pilotCountryFlag": "/assets/images/teams/flags/portugal_flag.svg"
+                    "pilotPicture": "/assets/images/teams/racers/nyck_de_vries.png",
+                    "pilotFirstName": "Nyck",
+                    "pilotLastName": "De Vries",
+                    "pilotNumber": "21",
+                    "pilotCountryName": "Países Baixos",
+                    "pilotCountryFlag": "/assets/images/teams/flags/netherlands_flag.svg"
                 }
             ],
-            "reserveDriver": "André Lotterer, David Beckmann",
-            "teamOrigin": "Stuttgart, Alemanha",
-            "carType": "Porsche 99X Electric Gen3",
-            "director": "Florian Modlinger",
-            "pageColor": "#D5001C"
+            "reserveDriver": "Jordan King, Kush Maini",
+            "teamOrigin": "Banbury, Inglaterra",
+            "carType": "Mahindra M10Electro",
+            "director": "Frederic Bertrand",
+            "pageColor": "#DD052B"
         }
     },
     {
         "id": 2,
         "name": "Nissan",
-        "logo": "nissan_logo.svg",
+        "logo": "/assets/images/teams/btnLogos/nissan_logo.svg",
         "colorButton": "#C3002F",
         "detailsPage": {
             "fullName": "Nissan Formula E Team",
@@ -309,7 +309,7 @@
         "id": 10,
         "name": "Envision",
         "logo": "/assets/images/teams/btnLogos/envision_logo.svg",
-        "colorButton": "#00BE26f",
+        "colorButton": "#00BE26",
         "detailsPage": {
             "fullName": "Envision Racing",
             "fullLogoImg": "/assets/images/teams/fullLogos/envision_full_logo.svg",
@@ -341,36 +341,36 @@
     },
     {
         "id": 11,
-        "name": "Mahindra",
-        "logo": "/assets/images/teams/btnLogos/mahindra_logo.svg",
-        "colorButton": "#DD052B",
+        "name": "TAG Heuer Porsche",
+        "logo": "/assets/images/teams/btnLogos/tag_heuer_porsche_logo.svg",
+        "colorButton": "#D5001C",
         "detailsPage": {
-            "fullName": "Mahindra Racing",
-            "fullLogoImg": "/assets/images/teams/fullLogos/mahindra_full_logo.svg",
-            "carTeam": "/assets/images/teams/cars/Mahindra M10Electro",
+            "fullName": "TAG Heuer Porsche",
+            "fullLogoImg": "/assets/images/teams/fullLogos/tag_heuer_porsche_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/tag_heuer_porsche_car.svg",
             "pilots": [
                 {
-                    "pilotPicture": "/assets/images/teams/racers/edoardo_mortara.png",
-                    "pilotFirstName": "Edoardo",
-                    "pilotLastName": "Mortara",
-                    "pilotNumber": "48",
-                    "pilotCountryName": "Suíça",
-                    "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
+                    "pilotPicture": "/assets/images/teams/racers/pascal_wehrlein.png",
+                    "pilotFirstName": "Pascal",
+                    "pilotLastName": "Wehrlein",
+                    "pilotNumber": "94",
+                    "pilotCountryName": "Alemanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/germany_flag.svg"
                 },
                 {
-                    "pilotPicture": "/assets/images/teams/racers/nyck_de_vries.png",
-                    "pilotFirstName": "Nyck",
-                    "pilotLastName": "De Vries",
-                    "pilotNumber": "21",
-                    "pilotCountryName": "Países Baixos",
-                    "pilotCountryFlag": "/assets/images/teams/flags/netherlands_flag.svg"
+                    "pilotPicture": "/assets/images/teams/racers/antonio_da_costa.png",
+                    "pilotFirstName": "António Félix",
+                    "pilotLastName": "Da Costa",
+                    "pilotNumber": "13",
+                    "pilotCountryName": "Portugal",
+                    "pilotCountryFlag": "/assets/images/teams/flags/portugal_flag.svg"
                 }
             ],
-            "reserveDriver": "Jordan King, Kush Maini",
-            "teamOrigin": "Banbury, Inglaterra",
-            "carType": "Mahindra M10Electro",
-            "director": "Frederic Bertrand",
-            "pageColor": "#DD052B"
+            "reserveDriver": "André Lotterer, David Beckmann",
+            "teamOrigin": "Stuttgart, Alemanha",
+            "carType": "Porsche 99X Electric Gen3",
+            "director": "Florian Modlinger",
+            "pageColor": "#D5001C"
         }
     }
 ]
