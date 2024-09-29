@@ -1,0 +1,233 @@
+[
+  {
+    "backgroundImageUrl": "/assets/images/home/principalNews.png",
+    "partner": "CNN",
+    "newsType": "Notícia",
+    "title": "Mahindra acaba de vencer mais uma, sem dificuldades",
+    "moreInfos": {
+      "link": "/",
+      "text": "Ver mais",
+      "time": "Hoje"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/landing/Home-Image.png",
+    "partner": "BBC",
+    "newsType": "Notícia",
+    "title": "Equipe Nissan conquista vitória impressionante em Roma",
+    "moreInfos": {
+      "link": "/nissan-vitoria-roma",
+      "text": "Ver mais",
+      "time": "2 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/seasonOverview.png",
+    "partner": "ESPN",
+    "newsType": "Resumo",
+    "title": "Resumo da temporada: Equipes se preparam para nova era elétrica",
+    "moreInfos": {
+      "link": "/temporada-formula-e",
+      "text": "Ver mais",
+      "time": "1 semana"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/championshipStandings.png",
+    "partner": "Sky Sports",
+    "newsType": "Classificação",
+    "title": "Mercedes lidera tabela após uma temporada dominante",
+    "moreInfos": {
+      "link": "/classificacao-mercedes",
+      "text": "Ver mais",
+      "time": "3 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/racePreview.png",
+    "partner": "FOX Sports",
+    "newsType": "Prévia",
+    "title": "Expectativas para o ePrix de Berlim: quem são os favoritos?",
+    "moreInfos": {
+      "link": "/previa-berlim",
+      "text": "Ver mais",
+      "time": "Ontem"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/newDrivers.png",
+    "partner": "CNN",
+    "newsType": "Notícia",
+    "title": "Novos pilotos chegam à Fórmula E: o futuro da competição",
+    "moreInfos": {
+      "link": "/novos-pilotos",
+      "text": "Ver mais",
+      "time": "5 horas"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/trackAnalysis.png",
+    "partner": "BBC",
+    "newsType": "Análise",
+    "title": "Análise técnica do circuito de Paris: desafios e oportunidades",
+    "moreInfos": {
+      "link": "/analise-paris",
+      "text": "Ver mais",
+      "time": "2 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/batteryTech.png",
+    "partner": "ESPN",
+    "newsType": "Tecnologia",
+    "title": "Avanços na tecnologia de baterias: como isso afeta a Fórmula E",
+    "moreInfos": {
+      "link": "/tecnologia-baterias",
+      "text": "Ver mais",
+      "time": "1 semana"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/seasonPreview.png",
+    "partner": "Sky Sports",
+    "newsType": "Prévia",
+    "title": "Prévia da nova temporada: mudanças de regulamento e suas consequências",
+    "moreInfos": {
+      "link": "/previa-temporada",
+      "text": "Ver mais",
+      "time": "4 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/teamInsight.png",
+    "partner": "FOX Sports",
+    "newsType": "Entrevista",
+    "title": "Entrevista com o chefe de equipe da Jaguar: estratégias para a vitória",
+    "moreInfos": {
+      "link": "/entrevista-jaguar",
+      "text": "Ver mais",
+      "time": "Hoje"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/tireTech.png",
+    "partner": "CNN",
+    "newsType": "Tecnologia",
+    "title": "Nova tecnologia de pneus promete mais durabilidade para as equipes",
+    "moreInfos": {
+      "link": "/tecnologia-pneus",
+      "text": "Ver mais",
+      "time": "2 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/crowdReaction.png",
+    "partner": "BBC",
+    "newsType": "Notícia",
+    "title": "Reações da torcida: a energia nas arquibancadas da Fórmula E",
+    "moreInfos": {
+      "link": "/reacao-torcida",
+      "text": "Ver mais",
+      "time": "Ontem"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/driverFocus.png",
+    "partner": "ESPN",
+    "newsType": "Entrevista",
+    "title": "Piloto da Porsche fala sobre os desafios da temporada",
+    "moreInfos": {
+      "link": "/entrevista-porsche",
+      "text": "Ver mais",
+      "time": "5 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/qualifyingResults.png",
+    "partner": "Sky Sports",
+    "newsType": "Resultados",
+    "title": "Resultados da qualificação em Nova York: surpresa nas primeiras posições",
+    "moreInfos": {
+      "link": "/resultados-qualificacao-ny",
+      "text": "Ver mais",
+      "time": "Hoje"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/sustainability.png",
+    "partner": "FOX Sports",
+    "newsType": "Notícia",
+    "title": "Sustentabilidade na Fórmula E: como o esporte está mudando o cenário mundial",
+    "moreInfos": {
+      "link": "/sustentabilidade-formula-e",
+      "text": "Ver mais",
+      "time": "2 semanas"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/raceIncidents.png",
+    "partner": "CNN",
+    "newsType": "Notícia",
+    "title": "Incidentes na pista: análise dos momentos mais tensos da última corrida",
+    "moreInfos": {
+      "link": "/incidentes-pista",
+      "text": "Ver mais",
+      "time": "3 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/teamUpdates.png",
+    "partner": "BBC",
+    "newsType": "Notícia",
+    "title": "Atualizações das equipes: quem trocou de carro e quem ficou para trás",
+    "moreInfos": {
+      "link": "/atualizacoes-equipes",
+      "text": "Ver mais",
+      "time": "Ontem"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/landing/Home-Image.png",
+    "partner": "ESPN",
+    "newsType": "Transferências",
+    "title": "Transferências de pilotos: quem são os novos rostos nas equipes?",
+    "moreInfos": {
+      "link": "/transferencias-pilotos",
+      "text": "Ver mais",
+      "time": "1 mês"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/energyEfficiency.png",
+    "partner": "Sky Sports",
+    "newsType": "Tecnologia",
+    "title": "Eficiência energética: como as equipes estão otimizando o consumo",
+    "moreInfos": {
+      "link": "/eficiencia-energetica",
+      "text": "Ver mais",
+      "time": "2 dias"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/futureOfFormulaE.png",
+    "partner": "FOX Sports",
+    "newsType": "Futuro",
+    "title": "O futuro da Fórmula E: o que esperar da próxima geração de carros elétricos",
+    "moreInfos": {
+      "link": "/futuro-formula-e",
+      "text": "Ver mais",
+      "time": "Ontem"
+    }
+  },
+  {
+    "backgroundImageUrl": "/assets/images/home/investmentNews.png",
+    "partner": "CNN",
+    "newsType": "Notícia",
+    "title": "Investidores apostam pesado no crescimento da Fórmula E",
+    "moreInfos": {
+      "link": "/investimentos-formula-e",
+      "text": "Ver mais",
+      "time": "5 dias"
+    }
+  }
+]

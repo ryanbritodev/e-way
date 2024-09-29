@@ -20,10 +20,10 @@ export const AppLayout = ({ children }) => {
       path: "/volt",
       imageUrl: "/assets/images/sideBar/voltIcon.svg",
     },
-    {
-      path: "/avatars",
-      imageUrl: "/assets/images/sideBar/avatarsIcon.svg",
-    },
+    // {
+    //   path: "/avatars",
+    //   imageUrl: "/assets/images/sideBar/avatarsIcon.svg",
+    // },
     {
       path: "/settings",
       imageUrl: "/assets/images/sideBar/settingsIcon.svg",

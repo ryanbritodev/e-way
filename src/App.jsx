@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Landing } from "./pages/Landing";
 import { Home } from "./pages/Home";
 import "./index.css";
-import { News } from "./pages/News";
+import { NewsPage } from "./pages/News";
 import { AppLayout } from "./pages/components/AppLayout";
 import { Racers } from "./pages/Racers";
 import { Volt } from "./pages/Volt";
@@ -34,7 +34,7 @@ function App() {
             path="/news"
             element={
               <AppLayout>
-                <News />
+                <NewsPage />
               </AppLayout>
             }
           />
@@ -54,14 +54,14 @@ function App() {
               </AppLayout>
             }
           />
-          <Route
+          {/* <Route
             path="/avatars"
             element={
               <AppLayout>
                 <Avatars />
               </AppLayout>
             }
-          />
+          /> */}
           <Route
             path="/settings"
             element={
