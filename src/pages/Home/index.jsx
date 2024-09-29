@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <main className="w-full h-full flex flex-col gap-[2em]">
       <h1 className="text-6xl md:text-5xl font-bold">Início</h1>
-      <section className="flex flex-wrap gap-x-[4em] gap-y-[2em] justify-between pb-[2em]">
+      <section className="flex flex-wrap gap-x-[6em] gap-y-[2em] justify-start pb-[2em]">
         <div>
           <h2 className="text-2xl font-bold mb-[.5em]">Próxima corrida</h2>
           <NextRaceCalendar.Root>
