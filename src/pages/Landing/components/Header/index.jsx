@@ -26,8 +26,8 @@ export const Header = () => {
           href="../Account/index.html"
           className={`${styles['clickables__link']} ${styles['button-link']}`}
         >
-          <button className={`${styles['clickables__button']} ${styles['button']}`}>
-            Entrar
+          <button className={`${styles['clickables__button']} ${styles['button']}`} onClick={() => {localStorage.setItem("authToken", "entrou!")}}>
+            Entrar  
           </button>
         </a>
       </div>
