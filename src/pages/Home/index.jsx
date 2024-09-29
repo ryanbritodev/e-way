@@ -44,7 +44,7 @@ export const Home = () => {
               <News.Partner partner="CNN" />
               <News.Type newsType="Notícia" />
               <News.Title title="Mahindra acaba de vencer mais uma, sem dificuldades" />
-              <News.MoreInfos link="/" text="Ver mais" time="Hoje" />
+              <News.MoreInfos link="/news" text="Ver mais" time="Hoje" target="self" />
             </News.Root>
           </div>
         </div>

@@ -2,7 +2,7 @@ export const NewsRoot = ({ backgroundImageUrl, children, className }) => {
   return (
     <div
       className={
-        "w-full h-[16em] max-w-[25em] flex flex-col relative rounded-xl" + className
+        "w-full h-[16em] max-w-[12em] flex flex-col relative rounded-xl" + className
       }
     >
       <img
