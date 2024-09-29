@@ -11,7 +11,7 @@ export const SideBar = ({ links }) => {
         className="w-full max-w-[3em] md:max-w-[4em] mb-[3.5em] max-sm:max-w-[5em]"
       />
 
-      <div className="flex flex-col justify-between items-between h-full max-h-full max-sm:flex-row max-sm:gap-[2em] max-sm:flex-wrap max-sm:justify-center max-sm:items-center max-sm:max-w-[60%]  max-sm:gap-y-0">
+      <div className="flex flex-col justify-between items-between h-full max-h-full max-sm:flex-row max-sm:gap-[2em] max-sm:flex-wrap max-sm:justify-center max-sm:items-center max-sm:max-w-[60%]  max-sm:gap-y-0 max-sm:h-[40%]">
         {links.map((link) => {
           return (
             <Link

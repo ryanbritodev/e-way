@@ -13,10 +13,23 @@ export const BurgerMenu = ({ children }) => {
     setOpen(!open);
   };
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      if (width > 640) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div
-        className={`flex justify-center items-center sm:hidden z-20 right-4 top-9 cursor-pointer p-3 px-2 rounded-full transition-all hover:shadow-[0_0_30px_-10px_rgba(39,193,184,.9)] shadow-[0_0_30px_-10px_rgba(0,0,0,0.8)] ${
+        className={`flex justify-center items-center sm:hidden z-20 right-4 top-9 cursor-pointer p-3 px-2 rounded-full transition-all hover:shadow-[0_0_20px_-10px_rgba(39,193,184,.9)] shadow-[0_0_30px_-10px_rgba(0,0,0,0.8)] ${
           open ? "bg-eblue fixed" : "bg-white absolute"
         }`}
         onClick={handleClick}
