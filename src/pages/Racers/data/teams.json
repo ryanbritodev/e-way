@@ -1,0 +1,398 @@
+[
+    {
+        "id": 1,
+        "name": "Mahindra",
+        "logo": "/assets/images/teams/btnLogos/mahindra_logo.svg",
+        "colorButton": "#DD052B",
+        "detailsPage": {
+            "fullName": "Mahindra Racing",
+            "fullLogoImg": "/assets/images/teams/fullLogos/mahindra_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/mahindra_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/edoardo_mortara.png",
+                    "pilotFirstName": "Edoardo",
+                    "pilotLastName": "Mortara",
+                    "pilotNumber": "48",
+                    "pilotCountryName": "Suíça",
+                    "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/nyck_de_vries.png",
+                    "pilotFirstName": "Nyck",
+                    "pilotLastName": "De Vries",
+                    "pilotNumber": "21",
+                    "pilotCountryName": "Países Baixos",
+                    "pilotCountryFlag": "/assets/images/teams/flags/netherlands_flag.svg"
+                }
+            ],
+            "reserveDriver": "Jordan King, Kush Maini",
+            "teamOrigin": "Banbury, Inglaterra",
+            "carType": "Mahindra M10Electro",
+            "director": "Frederic Bertrand",
+            "pageColor": "#DD052B"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Nissan",
+        "logo": "/assets/images/teams/btnLogos/nissan_logo.svg",
+        "colorButton": "#C3002F",
+        "detailsPage": {
+            "fullName": "Nissan Formula E Team",
+            "fullLogoImg": "/assets/images/teams/fullLogos/nissan_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/nissan_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/oliver_rowland.png",
+                    "pilotFirstName": "Oliver",
+                    "pilotLastName": "Rowland",
+                    "pilotNumber": "22",
+                    "pilotCountryName": "Grã-Bretanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/sacha_fenestraz.png",
+                    "pilotFirstName": "Sacha",
+                    "pilotLastName": "Fenestraz",
+                    "pilotNumber": "23",
+                    "pilotCountryName": "França",
+                    "pilotCountryFlag": "/assets/images/teams/flags/france_flag.svg"
+                }
+            ],
+            "reserveDriver": "Caio Collet",
+            "teamOrigin": "Le Mans, France",
+            "carType": "Nissan e-4ORCE 04",
+            "director": "Tommaso Volpe",
+            "pageColor": "#C3002F"
+        }
+    },
+    {
+        "id": 3,
+        "name": "NEOM McLaren",
+        "logo": "/assets/images/teams/btnLogos/neom_mclaren_logo.svg",
+        "colorButton": "#FF8000",
+        "detailsPage": {
+            "fullName": "NEOM McLaren Formula E Team",
+            "fullLogoImg": "/assets/images/teams/fullLogos/neom_mclaren_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/neom_mclaren_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/jake_hughes.png",
+                    "pilotFirstName": "Jake",
+                    "pilotLastName": "Hughes",
+                    "pilotNumber": "5",
+                    "pilotCountryName": "Grã-Bretanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/sam_bird.png",
+                    "pilotFirstName": "Sam",
+                    "pilotLastName": "Bird",
+                    "pilotNumber": "8",
+                    "pilotCountryName": "Grã-Bretanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
+                }
+            ],
+            "reserveDriver": "Taylor Barnard",
+            "teamOrigin": "Bicester, Inglaterra",
+            "carType": "Nissan e-4ORCE 04",
+            "director": "Ian James",
+            "pageColor": "#FF8000"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Maserati MSG",
+        "logo": "/assets/images/teams/btnLogos/maserati_msg_logo.svg",
+        "colorButton": "#001489",
+        "detailsPage": {
+            "fullName": "Maserati MSG Racing",
+            "fullLogoImg": "/assets/images/teams/fullLogos/maserati_msg_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/maserati_msg_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/jehan_darvula.png",
+                    "pilotFirstName": "Jehan",
+                    "pilotLastName": "Darvula",
+                    "pilotNumber": "18",
+                    "pilotCountryName": "Índia",
+                    "pilotCountryFlag": "/assets/images/teams/flags/india_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/maximilian_gunther.png",
+                    "pilotFirstName": "Maximilian",
+                    "pilotLastName": "Günther",
+                    "pilotNumber": "7",
+                    "pilotCountryName": "Alemanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/germany_flag.svg"
+                }
+            ],
+            "reserveDriver": "Ainda não anunciado",
+            "teamOrigin": "Monte Carlo, Mônaco",
+            "carType": "Maserati Tipo Folgore",
+            "director": "Ainda não anunciado",
+            "pageColor": "#001489"
+        }
+    },
+    {
+        "id": 5,
+        "name": "DS Penske",
+        "logo": "/assets/images/teams/btnLogos/ds_penske_logo.svg",
+        "colorButton": "#CBA65F",
+        "detailsPage": {
+            "fullName": "DS Penske Formula E Team",
+            "fullLogoImg": "/assets/images/teams/fullLogos/ds_penske_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/ds_penske_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/jean_eric_vergne.png",
+                    "pilotFirstName": "Jean-Éric",
+                    "pilotLastName": "Vergne",
+                    "pilotNumber": "25",
+                    "pilotCountryName": "França",
+                    "pilotCountryFlag": "/assets/images/teams/flags/france_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/stoffel_vandoorne.png",
+                    "pilotFirstName": "Stoffel",
+                    "pilotLastName": "Vandoorne",
+                    "pilotNumber": "2",
+                    "pilotCountryName": "Bélgica",
+                    "pilotCountryFlag": "/assets/images/teams/flags/belgium_flag.svg"
+                }
+            ],
+            "reserveDriver": "Oliver Turvey",
+            "teamOrigin": "Versailles, França",
+            "carType": "DS E-TENSE FE23",
+            "director": "Jay Penske",
+            "pageColor": "#CBA65F"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Andretti",
+        "logo": "/assets/images/teams/btnLogos/andretti_logo.svg",
+        "colorButton": "#ED3124",
+        "detailsPage": {
+            "fullName": "Andretti Formula E",
+            "fullLogoImg": "/assets/images/teams/fullLogos/andretti_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/andretti_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/jack_dennis.png",
+                    "pilotFirstName": "Jack",
+                    "pilotLastName": "Dennis",
+                    "pilotNumber": "1",
+                    "pilotCountryName": "Grã-Bretanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/norman_nato.png",
+                    "pilotFirstName": "Norman",
+                    "pilotLastName": "Nato",
+                    "pilotNumber": "17",
+                    "pilotCountryName": "França",
+                    "pilotCountryFlag": "/assets/images/teams/flags/france_flag.svg"
+                }
+            ],
+            "reserveDriver": "Zane Maloney",
+            "teamOrigin": "Indianapolis, EUA",
+            "carType": "Porsche 99X Electric Gen3",
+            "director": "Roger Griffiths",
+            "pageColor": "#ED3124"
+        }
+    },
+    {
+        "id": 7,
+        "name": "ABT CUPRA",
+        "logo": "/assets/images/teams/btnLogos/abt_cupra_logo.svg",
+        "colorButton": "#194997",
+        "detailsPage": {
+            "fullName": "ABT CUPRA Formula E Team",
+            "fullLogoImg": "/assets/images/teams/fullLogos/abt_cupra_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/abt_cupra_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/nico_muller.png",
+                    "pilotFirstName": "Nico",
+                    "pilotLastName": "Müller",
+                    "pilotNumber": "51",
+                    "pilotCountryName": "Suíça",
+                    "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/lucas_di_grassi.png",
+                    "pilotFirstName": "Lucas",
+                    "pilotLastName": "Di Grassi",
+                    "pilotNumber": "11",
+                    "pilotCountryName": "Brasil",
+                    "pilotCountryFlag": "/assets/images/teams/flags/brazil_flag.svg"
+                }
+            ],
+            "reserveDriver": "Kelvin van der Linde",
+            "teamOrigin": "Kempten, Alemanha",
+            "carType": "Mahindra M10Electro",
+            "director": "Thomas Biermaier",
+            "pageColor": "#194997"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Jaguar TCS",
+        "logo": "/assets/images/teams/btnLogos/jaguar_tcs_logo.svg",
+        "colorButton": "#000000",
+        "detailsPage": {
+            "fullName": "Jaguar TCS Racing",
+            "fullLogoImg": "/assets/images/teams/fullLogos/jaguar_tcs_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/jaguar_tcs_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/mitch_evans.png",
+                    "pilotFirstName": "Mitch",
+                    "pilotLastName": "Evans",
+                    "pilotNumber": "9",
+                    "pilotCountryName": "Nova Zelândia",
+                    "pilotCountryFlag": "/assets/images/teams/flags/new_zealand_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/nick_cassidy.png",
+                    "pilotFirstName": "Nick",
+                    "pilotLastName": "Cassidy",
+                    "pilotNumber": "37",
+                    "pilotCountryName": "Nova Zelândia",
+                    "pilotCountryFlag": "/assets/images/teams/flags/new_zealand_flag.svg"
+                }
+            ],
+            "reserveDriver": "Joel Eriksson, Tom Dillmann",
+            "teamOrigin": "Coventry, Inglaterra",
+            "carType": "Jaguar I-Type 6",
+            "director": "James Barclay",
+            "pageColor": "#000000"
+        }
+    },
+    {
+        "id": 9,
+        "name": "ERT",
+        "logo": "/assets/images/teams/btnLogos/ert_logo.svg",
+        "colorButton": "#3C3C3C",
+        "detailsPage": {
+            "fullName": "ERT Formula E Team",
+            "fullLogoImg": "/assets/images/teams/fullLogos/ert_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/ert_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/dan_ticktum.png",
+                    "pilotFirstName": "Dan",
+                    "pilotLastName": "Ticktum",
+                    "pilotNumber": "33",
+                    "pilotCountryName": "Grã-Bretanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/gb_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/sergio_sette_camara.png",
+                    "pilotFirstName": "Sérgio",
+                    "pilotLastName": "Sette Câmara",
+                    "pilotNumber": "2",
+                    "pilotCountryName": "Brasil",
+                    "pilotCountryFlag": "/assets/images/teams/flags/brazil_flag.svg"
+                }
+            ],
+            "reserveDriver": "Ainda não anunciado",
+            "teamOrigin": "Silverstone, Inglaterra",
+            "carType": "ERT X24",
+            "director": "Alex Hui",
+            "pageColor": "#3C3C3C"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Envision",
+        "logo": "/assets/images/teams/btnLogos/envision_logo.svg",
+        "colorButton": "#00BE26",
+        "detailsPage": {
+            "fullName": "Envision Racing",
+            "fullLogoImg": "/assets/images/teams/fullLogos/envision_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/envision_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/sebastien_buemi.png",
+                    "pilotFirstName": "Sébastien",
+                    "pilotLastName": "Buemi",
+                    "pilotNumber": "16",
+                    "pilotCountryName": "Suíça",
+                    "pilotCountryFlag": "/assets/images/teams/flags/switzerland_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/robin_frijins.png",
+                    "pilotFirstName": "Robin",
+                    "pilotLastName": "Frijins",
+                    "pilotNumber": "4",
+                    "pilotCountryName": "Países Baixos",
+                    "pilotCountryFlag": "/assets/images/teams/flags/netherlands_flag.svg"
+                }
+            ],
+            "reserveDriver": "Ainda não anunciado",
+            "teamOrigin": "Silverstone, Inglaterra",
+            "carType": "Jaguar I-Type 6",
+            "director": "Sylvain Filippi",
+            "pageColor": "#00BE26"
+        }
+    },
+    {
+        "id": 11,
+        "name": "TAG Heuer Porsche",
+        "logo": "/assets/images/teams/btnLogos/tag_heuer_porsche_logo.svg",
+        "colorButton": "#D5001C",
+        "detailsPage": {
+            "fullName": "TAG Heuer Porsche",
+            "fullLogoImg": "/assets/images/teams/fullLogos/tag_heuer_porsche_full_logo.svg",
+            "carTeam": "/assets/images/teams/cars/tag_heuer_porsche_car.svg",
+            "pilots": [
+                {
+                    "pilotId": 1,
+                    "pilotPicture": "/assets/images/teams/racers/pascal_wehrlein.png",
+                    "pilotFirstName": "Pascal",
+                    "pilotLastName": "Wehrlein",
+                    "pilotNumber": "94",
+                    "pilotCountryName": "Alemanha",
+                    "pilotCountryFlag": "/assets/images/teams/flags/germany_flag.svg"
+                },
+                {
+                    "pilotId": 2,
+                    "pilotPicture": "/assets/images/teams/racers/antonio_da_costa.png",
+                    "pilotFirstName": "António Félix",
+                    "pilotLastName": "Da Costa",
+                    "pilotNumber": "13",
+                    "pilotCountryName": "Portugal",
+                    "pilotCountryFlag": "/assets/images/teams/flags/portugal_flag.svg"
+                }
+            ],
+            "reserveDriver": "André Lotterer, David Beckmann",
+            "teamOrigin": "Stuttgart, Alemanha",
+            "carType": "Porsche 99X Electric Gen3",
+            "director": "Florian Modlinger",
+            "pageColor": "#D5001C"
+        }
+    }
+]

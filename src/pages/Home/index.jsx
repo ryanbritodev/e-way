@@ -6,7 +6,7 @@ export const Home = () => {
   const [buttonText, setButtonText] = useState("Adicionar ao calendário");
   return (
     <main className="w-full h-full flex flex-col gap-[2em]">
-      <h1 className="text-5xl font-bold">Início</h1>
+      <h1 className="text-6xl md:text-5xl font-bold">Início</h1>
       <section className="flex flex-wrap gap-[30%] justify-baseline">
         <div>
           <h2 className="text-2xl font-bold mb-[.5em]">Próxima corrida</h2>
