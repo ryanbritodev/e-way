@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
   * {
     font-family: "Nunito", sans-serif;
     box-sizing: border-box;
@@ -11,5 +11,25 @@
     padding: 0;
     scroll-behavior: smooth;
     font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #27beb4;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #256F6A;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
   }
 }

@@ -4,7 +4,7 @@ export const Profile = () => {
   return (
     <>
       <h1 className="text-black text-5xl font-bold">Seu perfil</h1>
-      <div className="container divide-y lg:divide-x lg:divide-y-0 flex flex-col flex-wrap lg:flex-row items-center lg:justify-center pt-12 gap-8">
+      <div className="container divide-y xl:divide-x xl:divide-y-0 flex flex-col flex-wrap lg:flex-row items-center lg:justify-center pt-12 gap-8">
         <div className="flex flex-col gap-5 md:pr-28">
           <NameLabel label={"Nome"} content={"Diogo Leles"} />
           <NameLabel label={"Time favorito"} content={"Mahindra Racing"} />

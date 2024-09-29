@@ -4,7 +4,7 @@ export const SideBar = ({ links }) => {
   const { pathname } = useLocation();
 
   return (
-    <aside className="fixed sm:flex xl:relative align-self-left z-50 top-0 xl:mt-[2em] left-0 w-full max-w-[5em] md:max-w-[6em] xl:h-[40em] xl:max-h-[40em] h-full max-h-full bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_20px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
+    <aside className="fixed sm:flex xl:relative align-self-left z-50 top-0 xl:mt-[2em] left-0 w-full max-w-[5em] md:max-w-[6em] xl:h-[36em] xl:max-h-[40em] h-full max-h-full bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_20px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
       <img
         src="/assets/images/sideBar/ewayLogo.svg"
         alt="Eway Logo"
