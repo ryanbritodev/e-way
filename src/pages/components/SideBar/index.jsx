@@ -4,14 +4,14 @@ export const SideBar = ({ links }) => {
   const { pathname } = useLocation();
 
   return (
-    <aside className="absolute sm:flex xl:relative align-self-left z-50 top-0 left-0 w-full max-w-[5em] md:max-w-[6em] h-full max-h-[50em] bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_30px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
+    <aside className="fixed sm:flex xl:relative align-self-left z-50 top-0 xl:mt-[2em] left-0 w-full max-w-[5em] md:max-w-[6em] xl:h-[40em] xl:max-h-[40em] h-full max-h-full bg-white rounded-br-[2em] rounded-tr-[2em] xl:rounded-[2em] flex flex-col justify-center items-center pt-[2em] pb-[2em] gap-[.5em] shadow-[0_0_20px_-10px_rgba(0,0,0,0.9)] max-sm:w-full max-sm:static transition-all max-sm:max-w-full max-sm:rounded-none max-sm:justify-center lg:w-[5em]">
       <img
         src="/assets/images/sideBar/ewayLogo.png"
         alt="Eway Logo"
         className="w-full max-w-[3em] md:max-w-[4em] mb-[3.5em] max-sm:max-w-[5em]"
       />
 
-      <div className="flex flex-col justify-between items-between h-full max-h-full max-sm:flex-row max-sm:gap-[2em] max-sm:flex-wrap max-sm:justify-center max-sm:items-center max-sm:max-w-[60%] max-sm:max-h-[40%] max-sm:gap-y-0">
+      <div className="flex flex-col justify-between items-between h-full max-h-full max-sm:flex-row max-sm:gap-[2em] max-sm:flex-wrap max-sm:justify-center max-sm:items-center max-sm:max-w-[60%]  max-sm:gap-y-0">
         {links.map((link) => {
           return (
             <Link
@@ -32,3 +32,4 @@ export const SideBar = ({ links }) => {
     </aside>
   );
 };
+
