@@ -3,6 +3,10 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 export const Landing = () => {
+  if (location.pathname != "/") {
+    location.pathname = "/";
+  }
+  
   return (
     <>
       <main className={styles["container-main"]}>

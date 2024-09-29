@@ -9,6 +9,7 @@ import { Volt } from "./pages/Volt";
 import { Avatars } from "./pages/Avatars";
 import { Settings } from "./pages/Settings";
 import { Profile } from "./pages/Profile";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   const isAuth = localStorage.getItem("authToken");
@@ -16,66 +17,69 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            isAuth ? (
+        <Route path="/">
+          <Route
+            index
+            element={
+              isAuth ? (
+                <AppLayout>
+                  <Home />
+                </AppLayout>
+              ) : (
+                <Landing />
+              )
+            }
+          />
+          <Route
+            path="/news"
+            element={
               <AppLayout>
-                <Home />
+                <News />
               </AppLayout>
-            ) : (
-              <Landing />
-            )
-          }
-        />
-        <Route
-          path="/news"
-          element={
-            <AppLayout>
-              <News />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/racers"
-          element={
-            <AppLayout>
-              <Racers />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/volt"
-          element={
-            <AppLayout>
-              <Volt />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/avatars"
-          element={
-            <AppLayout>
-              <Avatars />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/settings"
-          element={
-            <AppLayout>
-              <Settings />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/profile"
-          element={
-            <AppLayout>
-              <Profile />
-            </AppLayout>
-          }
-        />
+            }
+          />
+          <Route
+            path="/racers"
+            element={
+              <AppLayout>
+                <Racers />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/volt"
+            element={
+              <AppLayout>
+                <Volt />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/avatars"
+            element={
+              <AppLayout>
+                <Avatars />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <AppLayout>
+                <Settings />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <AppLayout>
+                <Profile />
+              </AppLayout>
+            }
+          />
+          <Route path="/*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -28,8 +28,4 @@
     background: #256F6A;
     border-radius: 100vh;
   }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #c0a0b9;
-  }
 }
