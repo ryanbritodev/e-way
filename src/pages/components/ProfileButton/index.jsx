@@ -6,7 +6,7 @@ export const ProfileButton = () => {
   return (
     <Link
       to="/profile"
-      className={`sm:flex absolute right-[2em] top-[2em] w-[5em] h-[2em] p-[1.5em] flex justify-center items-center gap-[.5em] rounded-full transition-all hover:shadow-[0_0_30px_-10px_rgba(39,193,184,.9)] shadow-[0_0_30px_-10px_rgba(0,0,0,0.5)] max-sm:top-[2.5em] max-sm:left-[2.5em] z-50  ${
+      className={`sm:flex absolute right-[1em] top-[2em] w-[5em] h-[2em] p-[1.5em] flex justify-center items-center gap-[.5em] rounded-full transition-all hover:shadow-[0_0_30px_-10px_rgba(39,193,184,.9)] shadow-[0_0_30px_-10px_rgba(0,0,0,0.5)] max-sm:top-[2.5em] max-sm:left-[2.5em] z-50  ${
         pathname === "/profile" ? "bg-eblue" : "bg-white"
       }`}
     >

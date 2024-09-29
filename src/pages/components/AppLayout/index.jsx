@@ -31,13 +31,13 @@ export const AppLayout = ({ children }) => {
   ];
 
   return (
-    <div className="appLayout px-[2em] sm:px-[0em] sm:pr-[2em] py-[2em] w-full h-full flex flex-col xl:flex-row justify-top items-center xl:justify-center xl:items-start relative xl:static bg-[#fff]">
+    <div className="appLayout px-[2em] sm:px-[0em] sm:pr-[2em] w-full h-full flex flex-col xl:flex-row justify-top items-center xl:justify-center xl:items-start relative xl:static bg-[#fff]">
       <div className="sm:pr-[5em] sm:pl-[8em] md:pl-[12em] xl:pl-[0em] xl:gap-[3em] w-full max-w-[1280px] flex flex-col justify-top xl:flex-row xl:relative">
         <BurgerMenu>
           <SideBar links={links} />
           <ProfileButton />
         </BurgerMenu>
-        <div className="w-full h-full pt-[3em]">{children}</div>
+        <div className="w-full h-full max-h-screen pt-[4em] pb-[2em] overflow-y-auto overflow-x-hidden">{children}</div>
       </div>
     </div>
   );
