@@ -254,6 +254,11 @@
   "resolved" "https://registry.npmjs.org/@eslint/object-schema/-/object-schema-2.1.4.tgz"
   "version" "2.1.4"
 
+"@google/generative-ai@^0.20.0":
+  "integrity" "sha512-uJQNDr1sihvBJ9w8B0ESpNdX9aEueAMXgwnTuhTo+LnI7DD0M1KHnOWzxb2l6cM1rRHzvkdgJNNfeybcqg7uVg=="
+  "resolved" "https://registry.npmjs.org/@google/generative-ai/-/generative-ai-0.20.0.tgz"
+  "version" "0.20.0"
+
 "@humanwhocodes/module-importer@^1.0.1":
   "integrity" "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz"
