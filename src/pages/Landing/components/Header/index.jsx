@@ -22,14 +22,9 @@ export const Header = () => {
         <a href="#eway" className={styles['clickables__link']}>
           E-Way
         </a>
-        <a
-          href="../Account/index.html"
-          className={`${styles['clickables__link']} ${styles['button-link']}`}
-        >
-          <button className={`${styles['clickables__button']} ${styles['button']}`} onClick={() => {localStorage.setItem("authToken", "entrou!")}}>
-            Entrar  
-          </button>
-        </a>
+        <button className={`${styles['clickables__button']} ${styles['button']}`} onClick={() => {window.location.assign('/userIn')}}>
+          Entrar
+        </button>
       </div>
     </header>
   );

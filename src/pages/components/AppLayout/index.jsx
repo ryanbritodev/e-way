@@ -37,7 +37,7 @@ export const AppLayout = ({ children }) => {
           <SideBar links={links} />
           <ProfileButton />
         </BurgerMenu>
-        <div className="w-full h-full max-h-screen pt-[4em] pb-[2em] pr-[2em] overflow-y-auto overflow-x-hidden scrollbar">{children}</div>
+        <div className="w-full h-full max-h-screen pt-[4em] pb-[2em] pr-[2em] pl-1 overflow-y-auto overflow-x-hidden scrollbar">{children}</div>
       </div>
     </div>
   );

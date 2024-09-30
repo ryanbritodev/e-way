@@ -25,24 +25,24 @@ export const Settings = () => {
             <p className="text-black text-2xl md:text-lg max-sm:text-xl font-bold max-sm:text-center">
               O seu Código de Usuário é:
             </p>
-            <div className="flex gap-5 lg:gap-1 w-full justify-between flex-wrap max-sm:justify-center">
+            <div className="flex gap-5 lg:gap-1 w-full justify-between max-sm:justify-center">
               <p className="text-white text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
                 {userCode}
 
-                <button
-                  className="flex flex-row items-center justify-center"
-                  onClick={copyCode}
-                >
-                  <img
-                    src="assets/images/settingsIcons/copyIcon.svg"
-                    alt="Copy Icon"
-                    className="size-4"
-                  />
-                  <p className="text-white text-2xl md:text-sm font-bold">
-                    Copiar
-                  </p>
-                </button>
               </p>
+              <button
+                className="flex flex-col items-center justify-center"
+                onClick={copyCode}
+              >
+                <img
+                  src="assets/images/settingsIcons/copyIcon.svg"
+                  alt="Copy Icon"
+                  className="size-4"
+                />
+                <p className="text-black text-2xl md:text-sm font-bold">
+                  Copiar
+                </p>
+              </button>
             </div>
           </div>
           <button className="shadow-[0_0_10px_2px_rgba(39,193,184,0.3)] w-full flex justify-center items-center rounded-md font-bold">
@@ -71,7 +71,7 @@ export const Settings = () => {
             className="flex gap-3 items-center justify-center text-red-500 font-bold border-[1px] border-red-500 hover:bg-red-500 hover:text-white transition-all p-2 rounded-md w-32"
             onClick={() => {
               localStorage.removeItem("authToken");
-              window.location.reload();
+              window.location.assign('/');
             }}
           >
             <svg

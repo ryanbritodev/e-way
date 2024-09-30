@@ -7,7 +7,7 @@ export const NewsMoreInfos = ({ link, text, time, target }) => {
       <Link
         to={link}
         target={target == "self" ? "self" : "blank"}
-        className="flex flex-row w-[8em] text-eblue font-bold flex justify-center items-center"
+        className="flex flex-row w-[8em] text-eblue font-bold justify-center items-center"
       >
         {text} <ArrowRight width="2em" />
       </Link>

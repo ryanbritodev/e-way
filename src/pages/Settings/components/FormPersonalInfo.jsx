@@ -1,4 +1,4 @@
-import { InputLabel } from "./InputLabel";
+import { InputLabel } from "../../components/InputLabel";
 import { useState } from "react";
 
 export const FormPersonalInfo = () => {
@@ -6,19 +6,20 @@ export const FormPersonalInfo = () => {
 
   let bgColor = "#CDCDCD";
   if (!editDisabled) {
-    bgColor = "#FFFFFF";
+    bgColor = "#FFF";
   }
 
   return (
     <>
       <div
-        className={`flex flex-col gap-4 p-5 bg-[${bgColor}] rounded-lg transition-all border-[2px] border-[#CDCDCD] basis-10/12 min-w-72 max-sm:min-w-[15em] relative`}
+        className={`flex flex-col gap-4 p-5 rounded-lg transition-all border-[2px] border-[#CDCDCD] basis-10/12 min-w-72 max-sm:min-w-[15em] relative`}
+        style={{ backgroundColor: bgColor}}
       >
         <button
           onClick={() => {
             setEditDisabled(!editDisabled);
           }}
-          className="absolute -right-3 -top-3 bg-white"
+          className="absolute -right-3 -top-3 bg-white rounded-md"
         >
           <img
             src={

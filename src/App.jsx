@@ -10,6 +10,7 @@ import { Avatars } from "./pages/Avatars";
 import { Settings } from "./pages/Settings";
 import { Profile } from "./pages/Profile";
 import { NotFound } from "./pages/NotFound";
+import { UserIn } from "./pages/UserIn";
 
 function App() {
   const isAuth = localStorage.getItem("authToken");
@@ -28,6 +29,12 @@ function App() {
               ) : (
                 <Landing />
               )
+            }
+          />
+          <Route
+            path="/userIn"
+            element={
+              <UserIn/>
             }
           />
           <Route
