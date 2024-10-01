@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Landing } from "./pages/Landing";
+import { Landing } from "./pages/Landing/Landing";
 import { Home } from "./pages/Home";
 import "./index.css";
 import { NewsPage } from "./pages/News";
