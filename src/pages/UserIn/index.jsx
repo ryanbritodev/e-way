@@ -101,75 +101,71 @@ export const UserIn = () => {
     <>
       <Header />
       <form
-        className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] p-5 rounded-md relative"
+        className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] bg-white p-5 rounded-md relative"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="container flex divide-x items-start justify-center">
-          <div className="flex flex-col gap-2 px-8 basis-1/2 h-full">
+        <div className="container flex h-auto">
+          <div className={`flex flex-col gap-2 px-8 basis-1/2 h-full transition-all p-7  ${isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} flex-auto rounded-md`}>
             <h1 className="font-bold text-eblue text-2xl">
               Faça seu cadastro!
             </h1>
-            <div>
-              <div className={`flex flex-col gap-2`}>
-                <InputLabel
-                  id={"nameRegister"}
-                  inputValue={""}
-                  isPassword={false}
-                  isEmail={false}
-                  isDisabled={!isRegister}
-                  label={"Nome do Usuário (Ex. Arthur Sousa)"}
-                  register={register}
-                />
-                <InputLabel
-                  id={"emailRegister"}
-                  inputValue={""}
-                  isPassword={false}
-                  isEmail={true}
-                  isDisabled={!isRegister}
-                  label={"Email"}
-                  register={register}
-                />
-                <InputLabel
-                  id={"passwordRegister"}
-                  inputValue={""}
-                  isPassword={true}
-                  isDisabled={!isRegister}
-                  label={"Senha"}
-                  register={register}
-                />
-                <InputLabel
-                  id={"confirmPasswordRegister"}
-                  inputValue={""}
-                  isPassword={true}
-                  isDisabled={!isRegister}
-                  label={"Confirmar Senha"}
-                  register={register}
-                />
-              </div>
+            <div className={`flex flex-col gap-2`}>
+            <InputLabel
+                id={"nameRegister"}
+                inputValue={""}
+                isPassword={false}
+                isEmail={false}
+                isDisabled={!isRegister}
+                label={"Nome do Usuário (Ex. Arthur Sousa)"}
+                register={register}
+            />
+            <InputLabel
+                id={"emailRegister"}
+                inputValue={""}
+                isPassword={false}
+                isEmail={true}
+                isDisabled={!isRegister}
+                label={"Email"}
+                register={register}
+            />
+            <InputLabel
+                id={"passwordRegister"}
+                inputValue={""}
+                isPassword={true}
+                isDisabled={!isRegister}
+                label={"Senha"}
+                register={register}
+            />
+            <InputLabel
+                id={"confirmPasswordRegister"}
+                inputValue={""}
+                isPassword={true}
+                isDisabled={!isRegister}
+                label={"Confirmar Senha"}
+                register={register}
+            />
             </div>
           </div>
-          <div className="flex flex-col gap-2 px-8 basis-1/2 h-full">
+          <div className={`flex flex-col gap-2 px-8 basis-1/2 flex-auto transition-all p-7 ${!isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} flex-1 rounded-md`}>
             <h1 className="font-bold text-eblue text-2xl">
               Já tem uma conta? Faça seu login!
             </h1>
-            <div>
-              <div className="flex flex-col gap-2">
-                <InputLabel
-                  id={"emailLogin"}
-                  isPassword={false}
-                  isEmail={true}
-                  isDisabled={isRegister}
-                  label={"Email"}
-                  register={register}
-                />
-                <InputLabel
-                  id={"passwordLogin"}
-                  isPassword={true}
-                  isDisabled={isRegister}
-                  label={"Senha"}
-                  register={register}
-                />
-              </div>
+            <div className="flex flex-col gap-2">
+            <InputLabel
+                id={"emailLogin"}
+                isPassword={false}
+                isEmail={true}
+                isDisabled={isRegister}
+                label={"Email"}
+                register={register}
+            />
+            <InputLabel
+                id={"passwordLogin"}
+                isPassword={true}
+                isDisabled={isRegister}
+                label={"Senha"}
+                register={register}
+            />
             </div>
           </div>
         </div>
