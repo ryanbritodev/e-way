@@ -28,7 +28,12 @@ export const UserIn = () => {
                         </div>
                     </div>
                 </div>
-                <button className="px-5 py-2 bg-eblue text-black font-bold text-xl rounded-md max-w-32">Entrar</button>
+                <button className="px-5 py-2 bg-eblue text-black font-bold text-xl rounded-md max-w-32" 
+                    onClick={() => 
+                        {
+                            localStorage.setItem("authToken", "entrou")
+                            window.location.assign('/')
+                            }}>Entrar</button>
                 <button className="absolute top-1/2">
                     <ArrowLeftRight/>
                 </button>
