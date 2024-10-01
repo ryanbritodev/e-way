@@ -25,7 +25,7 @@ export const InputLabel = ({
             onChange={(e) => {
               setValue(e.target.value);
             }}
-            className="text-black focus:outline-none bg-inherit max-w-30"
+            className="text-black focus:outline-none bg-inherit flex-1"
           />
           {isPassword && (
             <button
@@ -33,11 +33,11 @@ export const InputLabel = ({
                 setVisible(!visible);
               }}
               disabled={isDisabled}
-              className="flex items-center justify-center absolute right-3"
+              className="flex items-center justify-center"
             >
               <img
                 src={
-                  visible === "password"
+                  visible === true
                     ? "assets/images/settingsIcons/visibleIcon.svg"
                     : "assets/images/settingsIcons/hideIcon.svg"
                 }
