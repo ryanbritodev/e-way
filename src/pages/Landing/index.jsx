@@ -19,7 +19,7 @@ export const Landing = () => {
             <h2 className={`${styles["home__subtitle"]} ${styles["subtitle"]}`}>
               Tudo em um só lugar
             </h2>
-            <button className={`${styles["home__button"]} ${styles["button"]}`}>
+            <button className={`${styles["home__button"]} ${styles["button"]}`} onClick={() => {window.location.assign('/userIn')}}>
               Saiba mais
             </button>
             <img
@@ -58,6 +58,7 @@ export const Landing = () => {
               </div>
               <button
                 className={`${styles["about__button"]} ${styles["button"]}`}
+                onClick={() => {window.location.assign('/userIn')}}
               >
                 Fazer Cadastro
               </button>

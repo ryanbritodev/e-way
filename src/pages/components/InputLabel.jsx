@@ -46,7 +46,7 @@ export const InputLabel = ({
             >
               <img
                 src={
-                  visible === "password"
+                  visible === true
                     ? "assets/images/settingsIcons/visibleIcon.svg"
                     : "assets/images/settingsIcons/hideIcon.svg"
                 }
