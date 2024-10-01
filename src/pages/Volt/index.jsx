@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const Volt = () => {
   const [messages, setMessages] = useState([
-    { interactor: "VoltAi", text: "Olá, como posso te ajudar hoje?" },
+    { interactor: "VoltAI", text: "Olá, como posso te ajudar hoje?" },
   ]);
 
   return (
@@ -15,7 +15,7 @@ export const Volt = () => {
           return (
             <Interaction
               key={`voltChat-${index}`}
-              interactor={message.interactor ? message.interactor : "VoltAi"}
+              interactor={message.interactor ? message.interactor : "VoltAI"}
               text={message.text}
             />
           );
