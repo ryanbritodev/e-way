@@ -13,7 +13,7 @@ import { NotFound } from "./pages/NotFound";
 import { UserIn } from "./pages/UserIn";
 
 function App() {
-  const isAuth = localStorage.getItem("authToken");
+  const isAuth = localStorage.getItem("email");
 
   return (
     <BrowserRouter>
@@ -31,12 +31,7 @@ function App() {
               )
             }
           />
-          <Route
-            path="/userIn"
-            element={
-              <UserIn/>
-            }
-          />
+          <Route path="/userIn" element={<UserIn />} />
           <Route
             path="/news"
             element={

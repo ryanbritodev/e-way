@@ -3,12 +3,13 @@ import { InputLabel } from "../components/InputLabel";
 import { Header } from "./components/Header";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const UserIn = () => {
   const { register, handleSubmit, formState, control, reset } = useForm();
   const [isRegister, setIsRegister] = useState(true);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data.emailLogin);
     if (
       (data.emailLogin === undefined && data.emailRegister === "") ||
@@ -33,7 +34,62 @@ export const UserIn = () => {
       return;
     }
 
-    // fazer requisição de login
+    if (data.emailLogin !== undefined) {
+      try {
+        const req = await axios.post(
+          "https://eway-api.onrender.com/users/login",
+          {
+            email: data.emailLogin,
+            password: data.passwordLogin,
+          }
+        );
+
+        if (req.status === 200) {
+          localStorage.setItem("name", req.data.name);
+          localStorage.setItem("email", req.data.email);
+          alert("Autenticação concluída, seja bem-vindo!");
+          window.location.href = "/";
+        }
+      } catch (err) {
+        if (err.status === 502) {
+          alert("Erro no servidor, tente novamente mais tarde!");
+          return;
+        }
+        if (err.status === 404) {
+          alert(
+            "Usuário ou senha incorretos, crie uma conta caso ainda não tenha uma!"
+          );
+          return;
+        }
+      }
+    } else {
+      try {
+        const req = await axios.post(
+          "https://eway-api.onrender.com/users/register",
+          {
+            name: data.nameRegister,
+            email: data.emailRegister,
+            password: data.passwordRegister,
+          }
+        );
+
+        if (req.status === 201) {
+          localStorage.setItem("name", req.data.name);
+          localStorage.setItem("email", req.data.email);
+          alert("Conta criada, seja bem-vindo!");
+          window.location.href = "/";
+        }
+      } catch (err) {
+        if (err.status === 502) {
+          alert("Erro no servidor, tente novamente mais tarde!");
+          return;
+        }
+        if (err.status === 400) {
+          alert("Todos os dados são necessários para criação do usuário!");
+          return;
+        }
+      }
+    }
   };
 
   useEffect(() => {
@@ -43,7 +99,7 @@ export const UserIn = () => {
 
   return (
     <>
-      {/* <Header/> */}
+      <Header />
       <form
         className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] p-5 rounded-md relative"
         onSubmit={handleSubmit(onSubmit)}
