@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className={styles['main__footer']}>
       <img
-        src="/assets/images/landing/E-way-Logomarca-icon.svg"
+        src="/assets/images/landing/ewayLogo.svg"
         alt="E-way logo"
         className={styles['footer__logo']}
       />
