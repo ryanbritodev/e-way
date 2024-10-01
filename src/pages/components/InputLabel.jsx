@@ -1,31 +1,40 @@
+import { isRequired } from "nodemon/lib/utils";
 import { useState } from "react";
 
 export const InputLabel = ({
   id,
   label,
-  inputValue,
   isPassword,
+  isEmail,
   isDisabled,
+  register,
 }) => {
-  const [value, setValue] = useState(inputValue);
   const [visible, setVisible] = useState(true);
 
   return (
     <>
       <div className="flex flex-col items-start justify-center gap-2">
-        <label for={id} className="text-black text-2xl md:text-lg font-bold">
+        <label
+          for={id}
+          className={`text-black text-2xl md:text-lg font-bold ${
+            isDisabled && "text-gray-500"
+          }`}
+        >
           {label}
         </label>
-        <div className="flex gap-0 items-center justify-between border-[1px] border-black rounded-md p-2 focus-within:ring transition-all bg-inherit w-full relative">
+        <div
+          className={`flex gap-0 items-center justify-between border-[1px] border-black rounded-md p-2 focus-within:ring transition-all bg-inherit w-full relative ${
+            isDisabled && "bg-gray-200"
+          } ${!isDisabled && "cursor-pointer"}`}
+        >
           <input
             id={id}
-            type={visible ? "text" : "password"}
+            type={visible ? (isEmail ? "email" : "text") : "password"}
             disabled={isDisabled}
-            value={value}
-            onChange={(e) => {
-              setValue(e.target.value);
-            }}
-            className="text-black focus:outline-none bg-inherit max-w-30"
+            className={`text-black focus:outline-none bg-inherit max-w-30 h-full w-full pr-[2em] pl-[.5em] ${
+              !isDisabled && "cursor-pointer"
+            }`}
+            {...register(id, { isRequired: !isDisabled })}
           />
           {isPassword && (
             <button
@@ -34,6 +43,7 @@ export const InputLabel = ({
               }}
               disabled={isDisabled}
               className="flex items-center justify-center absolute right-3"
+              type="button"
             >
               <img
                 src={

@@ -6,7 +6,7 @@ import { NewsPage } from "./pages/News";
 import { AppLayout } from "./pages/components/AppLayout";
 import { Racers } from "./pages/Racers";
 import { Volt } from "./pages/Volt";
-import { Avatars } from "./pages/Avatars";
+// import { Avatars } from "./pages/Avatars";
 import { Settings } from "./pages/Settings";
 import { Profile } from "./pages/Profile";
 import { NotFound } from "./pages/NotFound";
