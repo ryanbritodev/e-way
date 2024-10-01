@@ -327,3 +327,34 @@ body {
 /* .link__image {} */
 
 /* ---- Media Queries (Responsive)  ---- */
+@media (max-width: 425px) {
+  .main__header {
+    display: flex;
+    flex-direction: column;
+    padding: 1em; 
+    gap: 1em;
+  }
+
+  .header__clickables {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 1em;
+    width: 100%;
+  }
+
+  .clickables__link {
+    padding: 0.5em 0;
+    font-size: 1em; 
+  }
+
+  .clickables__button {
+    width: 100%; 
+    margin-top: 0; 
+    text-align: center;
+    margin: 0;
+  }
+  .home__image{
+    margin-bottom: 1em;
+  }
+}

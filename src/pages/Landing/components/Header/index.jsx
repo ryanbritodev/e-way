@@ -4,9 +4,9 @@ export const Header = () => {
   return (
     <header className={styles['main__header']}>
       <img
-        src="/assets/images/landing/E-way-Logomarca-icon.svg"
+        src="/assets/images/landing/ewayLogo.svg"
         alt="Eway"
-        className={styles['header__icon']}
+        className="size-14 rounded-full"
         id="#home"
       />
       <div className={styles['header__clickables']}>

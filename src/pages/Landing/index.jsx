@@ -111,7 +111,7 @@ export const Landing = () => {
               <h2
                 className={`${styles["assistent__subtitle"]} ${styles["subtitle"]}`}
               >
-                VoltAi
+                VoltAI
               </h2>
               <h1
                 className={`${styles["assistent__title"]} ${styles["title"]}`}
