@@ -1,6 +1,8 @@
 # E-way
 web-dev (sprint)
 
+# [Acesse o Eway (site hospedado) por aqui](https://the-eway.vercel.app/)
+
 ## Integrantes
 Arthur Pagani - RM: 554510 <br>
 Diogo Franciulli - RM: 558487 <br>

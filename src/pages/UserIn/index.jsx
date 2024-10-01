@@ -1,64 +1,194 @@
-import { ArrowLeftRight } from "lucide-react"
-import { InputLabel } from "../components/InputLabel"
-import { Header } from "./components/Header"
-import { useState } from "react"
+import { ArrowLeftRight } from "lucide-react";
+import { InputLabel } from "../components/InputLabel";
+import { Header } from "./components/Header";
+import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const UserIn = () => {
+  const { register, handleSubmit, formState, control, reset } = useForm();
+  const [isRegister, setIsRegister] = useState(true);
 
-    let login = false
-    let signin = false
-
-    const [entry, setEntry]= useState('l')
-
-    if (entry === 'l')
-    {
-        login = true
-        signin = false
+  const onSubmit = async (data) => {
+    console.log(data.emailLogin);
+    if (
+      (data.emailLogin === undefined && data.emailRegister === "") ||
+      data.passwordRegister === "" ||
+      data.confirmPasswordRegister === ""
+    ) {
+      alert("Preencha todos os campos antes de fazer o envio");
+      return;
     }
-    else if (entry === 's')
-    {
-        login = false
-        signin = true
+    if (
+      data.emailLogin === undefined &&
+      data.confirmPasswordRegister !== data.passwordRegister
+    ) {
+      alert("As senhas diferem.");
+      return;
+    }
+    if (
+      (data.emailLogin !== undefined && data.emailLogin === "") ||
+      data.passwordLogin === ""
+    ) {
+      alert("Preencha todos os campos antes de fazer o envio");
+      return;
     }
 
-    return (
-        <>
-            <Header/>
-            <div className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] bg-white p-5 rounded-md relative">
-                <div className="container flex flex-col lg:flex-row justify-center">
-                    <div className={`flex flex-col gap-2 px-8 py-4 rounded-md basis-1/2 h-full ${login ? 'bg-inherit' : 'bg-[#CDCDCD]'} transition-all`}>
-                        <h1 className="font-bold text-eblue text-2xl">Faça seu cadastro!</h1>
-                        <div>
-                            <div className="flex flex-col gap-2">
-                                <InputLabel id={'nome'} inputValue={''} isPassword={false} isDisabled={signin} label={'Nome'}/>
-                                <InputLabel id={'senha'} inputValue={''} isPassword={true} isDisabled={signin} label={'Senha'}/>
-                                <InputLabel id={'confirmarSenha'} inputValue={''} isPassword={true} isDisabled={signin} label={'Confirmar Senha'}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`flex flex-col gap-2 px-8 py-4 rounded-md basis-1/2 ${signin ? 'bg-inherit' : 'bg-[#CDCDCD]'} transition-all`}>
-                        <h1 className="font-bold text-eblue text-2xl">Já tem uma conta? Faça seu login!</h1>
-                        <div>
-                            <div className="flex flex-col gap-2">
-                                <InputLabel id={'nome'} inputValue={''} isPassword={false} isDisabled={login} label={'Nome'}/>
-                                <InputLabel id={'senha'} inputValue={''} isPassword={true} isDisabled={login} label={'Senha'}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button className="px-5 py-2 bg-eblue text-black font-bold text-xl rounded-md max-w-32" 
-                    onClick={() => 
-                        {
-                            localStorage.setItem("authToken", "entrou")
-                            window.location.assign('/')
-                            }}>Entrar</button>
-                <button className="absolute top-1/2 rotate-90 lg:rotate-0"
-                    onClick={() => {
-                        entry === 'l' ? setEntry('s') : setEntry('l')
-                    }}>
-                    <ArrowLeftRight/>
-                </button>
+    if (data.emailLogin !== undefined) {
+      try {
+        const req = await axios.post(
+          "https://eway-api.onrender.com/users/login",
+          {
+            email: data.emailLogin,
+            password: data.passwordLogin,
+          }
+        );
+
+        if (req.status === 200) {
+          localStorage.setItem("name", req.data.name);
+          localStorage.setItem("email", req.data.email);
+          alert("Autenticação concluída, seja bem-vindo!");
+          window.location.href = "/";
+        }
+      } catch (err) {
+        if (err.status === 502) {
+          alert("Erro no servidor, tente novamente mais tarde!");
+          return;
+        }
+        if (err.status === 404) {
+          alert(
+            "Usuário ou senha incorretos, crie uma conta caso ainda não tenha uma!"
+          );
+          return;
+        }
+      }
+    } else {
+      try {
+        const req = await axios.post(
+          "https://eway-api.onrender.com/users/register",
+          {
+            name: data.nameRegister,
+            email: data.emailRegister,
+            password: data.passwordRegister,
+          }
+        );
+
+        if (req.status === 201) {
+          localStorage.setItem("name", req.data.name);
+          localStorage.setItem("email", req.data.email);
+          alert("Conta criada, seja bem-vindo!");
+          window.location.href = "/";
+        }
+      } catch (err) {
+        if (err.status === 502) {
+          alert("Erro no servidor, tente novamente mais tarde!");
+          return;
+        }
+        if (err.status === 400) {
+          alert("Todos os dados são necessários para criação do usuário!");
+          return;
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    // control._reset;
+    reset();
+  }, [isRegister]);
+
+  return (
+    <>
+      <Header />
+      <form
+        className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] p-5 rounded-md relative"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className="container flex divide-x items-start justify-center">
+          <div className="flex flex-col gap-2 px-8 basis-1/2 h-full">
+            <h1 className="font-bold text-eblue text-2xl">
+              Faça seu cadastro!
+            </h1>
+            <div>
+              <div className={`flex flex-col gap-2`}>
+                <InputLabel
+                  id={"nameRegister"}
+                  inputValue={""}
+                  isPassword={false}
+                  isEmail={false}
+                  isDisabled={!isRegister}
+                  label={"Nome do Usuário (Ex. Arthur Sousa)"}
+                  register={register}
+                />
+                <InputLabel
+                  id={"emailRegister"}
+                  inputValue={""}
+                  isPassword={false}
+                  isEmail={true}
+                  isDisabled={!isRegister}
+                  label={"Email"}
+                  register={register}
+                />
+                <InputLabel
+                  id={"passwordRegister"}
+                  inputValue={""}
+                  isPassword={true}
+                  isDisabled={!isRegister}
+                  label={"Senha"}
+                  register={register}
+                />
+                <InputLabel
+                  id={"confirmPasswordRegister"}
+                  inputValue={""}
+                  isPassword={true}
+                  isDisabled={!isRegister}
+                  label={"Confirmar Senha"}
+                  register={register}
+                />
+              </div>
             </div>
-        </>
-    )
-}
+          </div>
+          <div className="flex flex-col gap-2 px-8 basis-1/2 h-full">
+            <h1 className="font-bold text-eblue text-2xl">
+              Já tem uma conta? Faça seu login!
+            </h1>
+            <div>
+              <div className="flex flex-col gap-2">
+                <InputLabel
+                  id={"emailLogin"}
+                  isPassword={false}
+                  isEmail={true}
+                  isDisabled={isRegister}
+                  label={"Email"}
+                  register={register}
+                />
+                <InputLabel
+                  id={"passwordLogin"}
+                  isPassword={true}
+                  isDisabled={isRegister}
+                  label={"Senha"}
+                  register={register}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          className="px-5 py-2 bg-eblue text-black font-bold text-xl rounded-md max-w-32"
+          type="submit"
+        >
+          Entrar
+        </button>
+        <button
+          className="absolute top-1/2 rotate-90 lg:rotate-0"
+          type="button"
+          onClick={() => {
+            setIsRegister(!isRegister);
+          }}
+        >
+          <ArrowLeftRight />
+        </button>
+      </form>
+    </>
+  );
+};

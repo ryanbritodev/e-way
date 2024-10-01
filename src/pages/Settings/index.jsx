@@ -28,7 +28,6 @@ export const Settings = () => {
             <div className="flex gap-5 lg:gap-1 w-full justify-between max-sm:justify-center">
               <p className="text-white text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
                 {userCode}
-
               </p>
               <button
                 className="flex flex-col items-center justify-center"
@@ -70,8 +69,9 @@ export const Settings = () => {
           <button
             className="flex gap-3 items-center justify-center text-red-500 font-bold border-[1px] border-red-500 hover:bg-red-500 hover:text-white transition-all p-2 rounded-md w-32"
             onClick={() => {
-              localStorage.removeItem("authToken");
-              window.location.assign('/');
+              localStorage.removeItem("email");
+              localStorage.removeItem("name");
+              window.location.assign("/");
             }}
           >
             <svg

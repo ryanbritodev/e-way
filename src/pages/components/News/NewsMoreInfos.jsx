@@ -6,7 +6,7 @@ export const NewsMoreInfos = ({ link, text, time, target }) => {
     <div className="w-full flex flex-row items-center justify-between text-sm">
       <Link
         to={link}
-        target={target == "self" ? "self" : "blank"}
+        target={target == "self" ? "" : "blank"}
         className="flex flex-row w-[8em] text-eblue font-bold justify-center items-center"
       >
         {text} <ArrowRight width="2em" />

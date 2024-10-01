@@ -35,7 +35,7 @@ export const Home = () => {
           <div>
             <h2 className="text-2xl font-bold mb-[.5em]">Sua pontuação</h2>
             <h3 className="text-3xl border border-[#ededed] flex justify-center items-center rounded-[.2em] text-[#303030] cursor-default py-[.2em] px-[.8em]">
-              25.005 pontos
+              0 pontos
             </h3>
           </div>
           <div>
@@ -44,7 +44,12 @@ export const Home = () => {
               <News.Partner partner="CNN" />
               <News.Type newsType="Notícia" />
               <News.Title title="Mahindra acaba de vencer mais uma, sem dificuldades" />
-              <News.MoreInfos link="/news" text="Ver mais" time="Hoje" target="self" />
+              <News.MoreInfos
+                link="/news"
+                text="Ver mais"
+                time="Hoje"
+                target="self"
+              />
             </News.Root>
           </div>
         </div>

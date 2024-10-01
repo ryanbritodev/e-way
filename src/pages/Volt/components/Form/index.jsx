@@ -6,8 +6,11 @@ export const Form = ({ setMessages }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const userMessage = { interactor: "Usuário", text: value };
-    
+    const userMessage = {
+      interactor: localStorage.getItem("name"),
+      text: value,
+    };
+
     setMessages((prevValue) => {
       return [...prevValue, userMessage];
     });

@@ -1,8 +1,10 @@
+import { useForm } from "react-hook-form";
 import { InputLabel } from "../../components/InputLabel";
 import { useState } from "react";
 
 export const FormPersonalInfo = () => {
   const [editDisabled, setEditDisabled] = useState(true);
+  const { register } = useForm();
 
   let bgColor = "#CDCDCD";
   if (!editDisabled) {
@@ -13,7 +15,7 @@ export const FormPersonalInfo = () => {
     <>
       <div
         className={`flex flex-col gap-4 p-5 rounded-lg transition-all border-[2px] border-[#CDCDCD] basis-10/12 min-w-72 max-sm:min-w-[15em] relative`}
-        style={{ backgroundColor: bgColor}}
+        style={{ backgroundColor: bgColor }}
       >
         <button
           onClick={() => {
@@ -33,16 +35,18 @@ export const FormPersonalInfo = () => {
         <InputLabel
           id={"nome"}
           label={"Nome"}
-          inputValue={"Diogo Leles"}
+          inputValue={localStorage.getItem("name")}
           isPassword={false}
           isDisabled={editDisabled}
+          register={register}
         />
         <InputLabel
           id={"email"}
           label={"E-mail"}
-          inputValue={"diogo@itau.com.br"}
+          inputValue={localStorage.getItem("email")}
           isPassword={false}
           isDisabled={editDisabled}
+          register={register}
         />
         <InputLabel
           id={"local"}
@@ -50,6 +54,7 @@ export const FormPersonalInfo = () => {
           inputValue={"São Paulo, SP"}
           isPassword={false}
           isDisabled={editDisabled}
+          register={register}
         />
         <InputLabel
           id={"senha"}
@@ -57,6 +62,7 @@ export const FormPersonalInfo = () => {
           inputValue={"fiap@2024"}
           isPassword={true}
           isDisabled={editDisabled}
+          register={register}
         />
       </div>
     </>
