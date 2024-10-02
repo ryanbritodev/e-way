@@ -13,7 +13,7 @@ export const Landing = () => {
         <Header />
 
         {/* Landing*/}
-        <section className="flex flex-col mt-28 items-center justify-center pt-12 w-full bg-white" id="home">
+        <section className="flex flex-col mt-24 items-center justify-center pt-12 w-full bg-white" id="home">
           <h1 className="text-black font-bold text-5xl text-center px-8">
             Notícias. Stats. Histórias.
           </h1>
