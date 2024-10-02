@@ -134,17 +134,17 @@ export const Landing = () => {
             <div className="w-[20em]">
               <h2 className="text-eblue font-bold text-xl my-4">O Problema</h2>
               <ul className="text-gray-800 text-lg">
-                <li className="mb-2"><b>Falta de acesso</b> à informação sobre a Fórmula E</li>
-                <li className="mb-2"><b>Escassez de engajamento</b> da comunidade</li>
-                <li><b>Conteúdos em inglês</b> no site oficial traduzido para português</li>
+                <li className="mb-2"><b>Falta de acesso</b> à informação sobre a Fórmula E.</li>
+                <li className="mb-2"><b>Escassez de engajamento</b> da comunidade.</li>
+                <li><b>Conteúdos em inglês</b> no site oficial traduzido para português.</li>
               </ul>
             </div>
             <div className="w-[20em]">
               <h2 className="text-eblue font-bold text-xl my-4">A Solução</h2>
               <ul className="text-gray-800 text-lg">
-                <li className="mb-2">Uma central de informações <b>intuitiva</b> e <b>inclusiva</b></li>
-                <li className="mb-2"><b>Inteligência Artificial</b> para suporte ao usuário</li>
-                <li>Plataforma 100% em <b>português-brasileiro</b></li>
+                <li className="mb-2">Uma central de informações <b>intuitiva</b> e <b>inclusiva.</b></li>
+                <li className="mb-2"><b>Inteligência Artificial</b> para suporte ao usuário.</li>
+                <li>Plataforma 100% em <b>português-brasileiro.</b></li>
               </ul>
             </div>
           </div>
