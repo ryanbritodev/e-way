@@ -5,7 +5,6 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
-  // Atualizar o estado ao fazer scroll
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -26,7 +25,7 @@ export const Header = () => {
         scrollY > 10 ? 'shadow-md' : ''
       }`}
     >
-      {/* Logo e Menu Hamburguer Container */}
+      {/* Logo e Menu */}
       <div className="flex justify-between px-8 items-center w-full md:w-auto">
         {/* Logo */}
         <img
@@ -36,7 +35,7 @@ export const Header = () => {
           id="home"
         />
 
-        {/* Botão de Menu Hamburguer */}
+        {/* Botão do Menu Hamburguer */}
         <div className="md:hidden z-50 mt-3">
           <button onClick={toggleMenu}>
             {isMenuOpen ? <BsXLg size={32} /> : <BsList size={32} />}
