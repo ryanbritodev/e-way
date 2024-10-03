@@ -11,16 +11,16 @@ export const Form = ({ setMessages }) => {
       text: value,
     };
 
-    setMessages((prevValue) => {
-      return [...prevValue, userMessage];
-    });
-    setValue("");
-
+    
     const aiMessage = {
       interactor: null,
       text: await callGeminiApi(value),
     };
-
+    
+    setMessages((prevValue) => {
+      return [...prevValue, userMessage];
+    });
+    setValue("");
     setMessages((prevValue) => {
       return [...prevValue, aiMessage];
     });
