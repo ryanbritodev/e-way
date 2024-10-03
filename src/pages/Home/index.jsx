@@ -6,10 +6,10 @@ export const Home = () => {
   const [buttonText, setButtonText] = useState("Adicionar ao calendário");
 
   return (
-    <main className="w-full h-full flex flex-col gap-[2em]">
+    <main className="w-full h-full flex flex-col gap-8">
       <h1 className="text-6xl md:text-5xl font-bold">Início</h1>
-      <section className="flex flex-wrap gap-x-[6em] gap-y-[2em] justify-start pb-[2em]">
-        <div>
+      <section className="flex flex-wrap gap-x-[6em] gap-y-[2em] justify-center md:justify-start pb-[2em]">
+        <div className="flex flex-col gap-2 ">
           <h2 className="text-2xl font-bold mb-[.5em]">Próxima corrida</h2>
           <NextRaceCalendar.Root>
             <NextRaceCalendar.Infos
@@ -31,14 +31,14 @@ export const Home = () => {
             />
           </NextRaceCalendar.Root>
         </div>
-        <div className="flex flex-col gap-[2em]  w-[16em]">
-          <div>
+        <div className="flex flex-col gap-5  w-[16em]">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <h2 className="text-2xl font-bold mb-[.5em]">Sua pontuação</h2>
             <h3 className="text-3xl border border-[#ededed] flex justify-center items-center rounded-[.2em] text-[#303030] cursor-default py-[.2em] px-[.8em]">
               0 pontos
             </h3>
           </div>
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h2 className="text-2xl font-bold mb-[.5em]">Notícia rápida</h2>
             <News.Root backgroundImageUrl="/assets/images/home/principalNews.png">
               <News.Partner partner="CNN" />

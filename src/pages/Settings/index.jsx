@@ -85,17 +85,17 @@ export const Settings = () => {
                 d="M16.9168 10.0455V6.125C16.9168 5.77982 16.6463 5.5 16.3127 5.5H5.43766C5.10399 5.5 4.8335 5.77982 4.8335 6.125V24.875C4.8335 25.2201 5.10399 25.5 5.43766 25.5H16.3127C16.6463 25.5 16.9168 25.2201 16.9168 24.875V20.9545"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M12.0835 15.5H25.3752M25.3752 15.5L21.7506 11.125M25.3752 15.5L21.7502 19.875"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             Sair

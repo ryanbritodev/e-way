@@ -12,7 +12,7 @@ export const NewsPage = () => {
         <div className="flex flex-row gap-[1em] w-full h-auto py-2 overflow-x-auto scrollbar">
           {data.sort((a, b) => b.title.localeCompare(a.title)).map((news) => {
             return (
-              <News.Root backgroundImageUrl={news.backgroundImageUrl}>
+              <News.Root key={news.id} backgroundImageUrl={news.backgroundImageUrl}>
                 <News.Partner partner={news.partner} />
                 <News.Type newsType={news.newsType} />
                 <News.Title title={news.title} />
@@ -33,7 +33,7 @@ export const NewsPage = () => {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map((news) => {
               return (
-                <News.Root backgroundImageUrl={news.backgroundImageUrl}>
+                <News.Root key={news.id} backgroundImageUrl={news.backgroundImageUrl}>
                   <News.Partner partner={news.partner} />
                   <News.Type newsType={news.newsType} />
                   <News.Title title={news.title} />
