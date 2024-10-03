@@ -84,7 +84,7 @@ export const Header = () => {
               className="text-black font-semibold hover:text-eblue transition-colors duration-300"
               onClick={closeMenu}
             >
-              E-Way
+              E-WAY
             </a>
           </li>
           <li>
