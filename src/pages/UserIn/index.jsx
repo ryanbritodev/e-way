@@ -1,7 +1,7 @@
 import { ArrowLeftRight } from "lucide-react";
 import { InputLabel } from "../components/InputLabel";
-import { Header } from "./components/Header";
 import { useForm } from "react-hook-form";
+import { Header } from "../Landing/components/Header/Header"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -99,13 +99,13 @@ export const UserIn = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <form
-        className="flex flex-col gap-4 max-w-[50rem] m-auto mt-20 items-center border-2 border-[#CDCDCD] bg-white p-5 rounded-md relative"
+        className="flex flex-col gap-4 max-w-[50rem] mx-10 mt-28 md:mx-auto items-center border-2 border-[#CDCDCD] bg-white p-5 rounded-md"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="container flex h-auto">
-          <div className={`flex flex-col gap-2 px-8 basis-1/2 h-full transition-all p-7  ${isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} flex-auto rounded-md`}>
+        <div className="container flex flex-col md:flex-row h-auto">
+          <div className={`flex flex-col gap-2 px-8 basis-1/2 h-full transition-all p-7  ${isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} flex-grow rounded-md`}>
             <h1 className="font-bold text-eblue text-2xl">
               Faça seu cadastro!
             </h1>
@@ -146,7 +146,16 @@ export const UserIn = () => {
             />
             </div>
           </div>
-          <div className={`flex flex-col gap-2 px-8 basis-1/2 flex-auto transition-all p-7 ${!isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} flex-1 rounded-md`}>
+          <button
+          className="rotate-90 md:rotate-0 self-center"
+          type="button"
+          onClick={() => {
+            setIsRegister(!isRegister);
+          }}
+          >
+            <ArrowLeftRight />
+          </button>
+          <div className={`flex flex-col gap-2 px-8 basis-1/2 flex-auto transition-all p-7 ${!isRegister  ? 'bg-inherit' : 'bg-[#CDCDCD]'} rounded-md`}>
             <h1 className="font-bold text-eblue text-2xl">
               Já tem uma conta? Faça seu login!
             </h1>
@@ -174,15 +183,6 @@ export const UserIn = () => {
           type="submit"
         >
           Entrar
-        </button>
-        <button
-          className="absolute top-1/2 rotate-90 lg:rotate-0"
-          type="button"
-          onClick={() => {
-            setIsRegister(!isRegister);
-          }}
-        >
-          <ArrowLeftRight />
         </button>
       </form>
     </>

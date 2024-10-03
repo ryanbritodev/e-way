@@ -5,18 +5,22 @@ import { BurgerMenu } from "../BurgerMenu";
 export const AppLayout = ({ children }) => {
   const links = [
     {
+      id: 1,
       path: "/",
       imageUrl: "/assets/images/sideBar/homeIcon.svg",
     },
     {
+      id: 2,
       path: "/news",
       imageUrl: "/assets/images/sideBar/newsIcon.svg",
     },
     {
+      id: 3,
       path: "/racers",
       imageUrl: "/assets/images/sideBar/racersIcon.svg",
     },
     {
+      id: 4,
       path: "/volt",
       imageUrl: "/assets/images/sideBar/voltIcon.svg",
     },
@@ -25,6 +29,7 @@ export const AppLayout = ({ children }) => {
     //   imageUrl: "/assets/images/sideBar/avatarsIcon.svg",
     // },
     {
+      id: 6,
       path: "/settings",
       imageUrl: "/assets/images/sideBar/settingsIcon.svg",
     },

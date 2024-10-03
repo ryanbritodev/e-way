@@ -15,6 +15,7 @@ export const SideBar = ({ links }) => {
         {links.map((link) => {
           return (
             <Link
+              key={link.id}
               to={link.path}
               className={`w-[4em] h-[4em] py-[1em] flex justify-center items-center rounded-full transition-all hover:shadow-[0_0_30px_-10px_rgba(39,193,184,.9)] ${
                 pathname === link.path ? "bg-eblue" : ""

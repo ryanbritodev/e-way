@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "backgroundImageUrl": "/assets/images/home/principalNews.png",
     "partner": "CNN",
     "newsType": "Notícia",
@@ -11,6 +12,7 @@
     }
   },
   {
+    "id": 2,
     "backgroundImageUrl": "/assets/images/landing/Home-Image.png",
     "partner": "BBC",
     "newsType": "Notícia",
@@ -22,6 +24,7 @@
     }
   },
   {
+    "id": 3,
     "backgroundImageUrl": "/assets/images/home/seasonOverview.png",
     "partner": "ESPN",
     "newsType": "Resumo",
@@ -33,6 +36,7 @@
     }
   },
   {
+    "id": 4,
     "backgroundImageUrl": "/assets/images/home/championshipStandings.png",
     "partner": "Sky Sports",
     "newsType": "Classificação",
@@ -44,6 +48,7 @@
     }
   },
   {
+    "id": 5,
     "backgroundImageUrl": "/assets/images/home/racePreview.png",
     "partner": "FOX Sports",
     "newsType": "Prévia",
@@ -55,6 +60,7 @@
     }
   },
   {
+    "id": 6,
     "backgroundImageUrl": "/assets/images/home/newDrivers.png",
     "partner": "CNN",
     "newsType": "Notícia",
@@ -66,6 +72,7 @@
     }
   },
   {
+    "id": 7,
     "backgroundImageUrl": "/assets/images/home/trackAnalysis.png",
     "partner": "BBC",
     "newsType": "Análise",
@@ -77,6 +84,7 @@
     }
   },
   {
+    "id": 8,
     "backgroundImageUrl": "/assets/images/home/batteryTech.png",
     "partner": "ESPN",
     "newsType": "Tecnologia",
@@ -88,6 +96,7 @@
     }
   },
   {
+    "id": 9,
     "backgroundImageUrl": "/assets/images/home/seasonPreview.png",
     "partner": "Sky Sports",
     "newsType": "Prévia",
@@ -99,6 +108,7 @@
     }
   },
   {
+    "id": 10,
     "backgroundImageUrl": "/assets/images/home/teamInsight.png",
     "partner": "FOX Sports",
     "newsType": "Entrevista",
@@ -110,6 +120,7 @@
     }
   },
   {
+    "id": 11,
     "backgroundImageUrl": "/assets/images/home/tireTech.png",
     "partner": "CNN",
     "newsType": "Tecnologia",
@@ -121,6 +132,7 @@
     }
   },
   {
+    "id": 12,
     "backgroundImageUrl": "/assets/images/home/crowdReaction.png",
     "partner": "BBC",
     "newsType": "Notícia",
@@ -132,6 +144,7 @@
     }
   },
   {
+    "id": 13,
     "backgroundImageUrl": "/assets/images/home/driverFocus.png",
     "partner": "ESPN",
     "newsType": "Entrevista",
@@ -143,6 +156,7 @@
     }
   },
   {
+    "id": 14,
     "backgroundImageUrl": "/assets/images/home/qualifyingResults.png",
     "partner": "Sky Sports",
     "newsType": "Resultados",
@@ -154,6 +168,7 @@
     }
   },
   {
+    "id": 15,
     "backgroundImageUrl": "/assets/images/home/sustainability.png",
     "partner": "FOX Sports",
     "newsType": "Notícia",
@@ -165,6 +180,7 @@
     }
   },
   {
+    "id": 16,
     "backgroundImageUrl": "/assets/images/home/raceIncidents.png",
     "partner": "CNN",
     "newsType": "Notícia",
@@ -176,6 +192,7 @@
     }
   },
   {
+    "id": 17,
     "backgroundImageUrl": "/assets/images/home/teamUpdates.png",
     "partner": "BBC",
     "newsType": "Notícia",
@@ -187,6 +204,7 @@
     }
   },
   {
+    "id": 18,
     "backgroundImageUrl": "/assets/images/landing/Home-Image.png",
     "partner": "ESPN",
     "newsType": "Transferências",
@@ -198,6 +216,7 @@
     }
   },
   {
+    "id": 19,
     "backgroundImageUrl": "/assets/images/home/energyEfficiency.png",
     "partner": "Sky Sports",
     "newsType": "Tecnologia",
@@ -209,6 +228,7 @@
     }
   },
   {
+    "id": 20,
     "backgroundImageUrl": "/assets/images/home/futureOfFormulaE.png",
     "partner": "FOX Sports",
     "newsType": "Futuro",

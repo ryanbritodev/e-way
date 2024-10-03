@@ -14,7 +14,7 @@ export const InputLabel = ({
     <>
       <div className="flex flex-col items-start justify-center gap-2">
         <label
-          for={id}
+          htmlFor={id}
           className={`text-black text-2xl md:text-lg font-bold ${
             isDisabled && "text-gray-500"
           }`}
