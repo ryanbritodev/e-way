@@ -14,13 +14,13 @@ export const Form = ({ setMessages }) => {
     setMessages((prevValue) => {
       return [...prevValue, userMessage];
     });
+    setValue("");
     
     const aiMessage = {
       interactor: null,
       text: await callGeminiApi(value),
     };
     
-    setValue("");
     setMessages((prevValue) => {
       return [...prevValue, aiMessage];
     });
