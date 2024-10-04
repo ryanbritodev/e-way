@@ -16,7 +16,7 @@ export const Settings = () => {
 
   return (
     <>
-      <h1 className="w-full text-black text-6xl md:text-5xl max-sm:text-4xl font-bold">
+      <h1 className="w-full text-black text-3xl sm:text-5xl font-bold">
         Configurações
       </h1>
       <div className="flex flex-col divide-y lg:flex-row lg:divide-x lg:divide-y-0 pt-10 justify-center">
@@ -26,7 +26,7 @@ export const Settings = () => {
               O seu Código de Usuário é:
             </p>
             <div className="flex gap-5 lg:gap-1 w-full justify-between max-sm:justify-center">
-              <p className="text-white text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
+              <p className="text-white text- sm:text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
                 {userCode}
               </p>
               <button
