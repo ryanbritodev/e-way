@@ -51,7 +51,7 @@ export const Form = ({ setMessages, setIsTyping }) => {
     >
       <input
         type="text"
-        className="w-full h-full transition-all outline-none border-1 indent-2 pl-2 pr-24 rounded-full shadow-[0px_0px_5px_2px_rgba(39,193,184,.9)]"
+        className="w-full h-full transition-all outline-none border-1 indent-2 pl-6 pr-24 rounded-full shadow-[0px_0px_5px_2px_rgba(39,193,184,.9)]"
         value={value}
         onChange={(event) => setValue(event.target.value)}
       />
