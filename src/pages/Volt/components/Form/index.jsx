@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { callGeminiApi } from "../../api";
 
-export const Form = ({ setMessages }) => {
+export const Form = ({ setMessages, setIsTyping }) => {
   const [value, setValue] = useState("");
 
   const handleSubmit = async (event) => {
@@ -12,18 +12,21 @@ export const Form = ({ setMessages }) => {
       text: value,
     };
 
-    // Adicionando a última mensagem do usuário ao histórico
+    // Adiciona a última mensagem do usuário ao histórico
     setMessages((prevValue) => [...prevValue, userMessage]);
     setValue("");
 
-    // Chama a API do Gemini e aguarda até ele retornar a resposta (await)
+    // Chama a API do Gemini e aguarda até ele retornar a resposta
     const aiResponse = await callGeminiApi(value);
 
-    // Atualização da Resposta da VoltAI de forma gradual
+    // Atualiza a resposta da VoltAI de forma gradual
     const aiMessage = { interactor: "VoltAI", text: "" };
     setMessages((prevValue) => [...prevValue, aiMessage]);
+    setIsTyping(true); // Define o estado de digitação como verdadeiro
 
     let currentText = "";
+    const typingSpeed = 35; // Velocidade
+
     aiResponse.split("").forEach((char, index) => {
       setTimeout(() => {
         currentText += char;
@@ -32,7 +35,12 @@ export const Form = ({ setMessages }) => {
           updatedMessages[updatedMessages.length - 1].text = currentText;
           return updatedMessages;
         });
-      }, 27 * index); // IMPORTANTE!!! Velocidade da digitação
+
+        // Verifica se terminou a digitação
+        if (index === aiResponse.length - 1) {
+          setIsTyping(false); // Finaliza o estado de digitação quando o texto termina
+        }
+      }, typingSpeed * index);
     });
   };
 
