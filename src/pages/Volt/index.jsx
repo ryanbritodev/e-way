@@ -6,6 +6,7 @@ export const Volt = () => {
   const [messages, setMessages] = useState([
     { interactor: "VoltAI", text: "Olá, como posso te ajudar hoje? ⚡" },
   ]);
+  const [isTyping, setIsTyping] = useState(false); // State de digitação da VoltAI
 
   return (
     <main className="w-full h-full flex flex-col gap-[2em] relative">
@@ -17,11 +18,12 @@ export const Volt = () => {
               key={`voltChat-${index}`}
               interactor={message.interactor ? message.interactor : "VoltAI"}
               text={message.text}
+              isTyping={isTyping && message.interactor === "VoltAI" && index === messages.length - 1} // Conferindo se a Volt ainda está digitando
             />
           );
         })}
       </section>
-      <Form setMessages={setMessages} messages={messages} />
+      <Form setMessages={setMessages} messages={messages} setIsTyping={setIsTyping} />
     </main>
   );
 };
