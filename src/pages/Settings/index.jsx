@@ -1,7 +1,21 @@
+import { useState, useEffect } from "react";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { FormPersonalInfo } from "./components/FormPersonalInfo";
 
 export const Settings = () => {
+  const [calendarLinked, setCalendarLinked] = useState(false); // Estado para verificar se o calendário está vinculado
+  const session = useSession(); // Sessão atual
+  const supabaseClient = useSupabaseClient(); // Comunicação com o Supabase
   const userCode = "XG11LMN242";
+
+  useEffect(() => {
+    // Verificando se o token do Google está disponível na sessão
+    if (session && session.provider_token) {
+      setCalendarLinked(true); // Se tiver o token na sessão atual, o calendário vai estar vinculado
+    } else {
+      setCalendarLinked(false);
+    }
+  }, [session]);
 
   const copyCode = () => {
     navigator.clipboard
@@ -14,19 +28,45 @@ export const Settings = () => {
       });
   };
 
+  // Função para vincular o calendário (login com Google)
+  async function linkCalendar() {
+    const { error } = await supabaseClient.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        scopes: "https://www.googleapis.com/auth/calendar", // Escopo da API Google Calendar
+      },
+    });
+    if (error) {
+      alert("Erro ao vincular o calendário");
+      console.error(error);
+    }
+  }
+
+  // Função para desvincular o calendário (logout do Google)
+  async function unlinkCalendar() {
+    const { error } = await supabaseClient.auth.signOut();
+    if (error) {
+      alert("Erro ao desvincular o calendário");
+      console.error(error);
+    } else {
+      setCalendarLinked(false); // Atualizando o estado
+      alert("Calendário desvinculado com sucesso!");
+    }
+  }
+
   return (
     <>
       <h1 className="w-full text-black text-3xl sm:text-5xl font-bold">
         Configurações
       </h1>
       <div className="flex flex-col divide-y lg:flex-row lg:divide-x lg:divide-y-0 pt-10 justify-center">
-        <div className="flex flex-col gap-10 p-10 w-full max-w-xl">
+        <div className="flex flex-col gap-10 p-4 sm:p-10 w-full max-w-xl">
           <div className="flex flex-row gap-2 justify-center flex-wrap items-center">
             <p className="text-black text-2xl md:text-lg max-sm:text-xl font-bold max-sm:text-center">
               O seu Código de Usuário é:
             </p>
             <div className="flex gap-5 lg:gap-1 w-full justify-between max-sm:justify-center">
-              <p className="text-white text- sm:text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
+              <p className="text-white text-lg sm:text-3xl bg-eblue rounded-md p-2 shadow-lg basis-11/12 text-center flex flex-col justify-center items-center">
                 {userCode}
               </p>
               <button
@@ -44,14 +84,21 @@ export const Settings = () => {
               </button>
             </div>
           </div>
-          <button className="shadow-[0_0_10px_2px_rgba(39,193,184,0.3)] w-full flex justify-center items-center rounded-md font-bold">
+
+          {/* Verificação pra ver se o calendário está vinculado na sessão atual */}
+          <button
+            className="shadow-[0_0_10px_2px_rgba(39,193,184,0.3)] w-full flex justify-center items-center rounded-md font-bold"
+            onClick={calendarLinked ? unlinkCalendar : linkCalendar}
+          >
             <img
               src="assets/images/settingsIcons/googleCalendarIcon.svg"
               alt="Google Calendar Icon"
             />
-            Vincular Calendário
+            {calendarLinked ? "Desvincular Calendário" : "Vincular Calendário"}
           </button>
-          {/* <div className="flex flex-col md:flex-row lg:flex-col gap-2 max-sm:text-center">
+        </div>
+
+        {/* <div className="flex flex-col md:flex-row lg:flex-col gap-2 max-sm:text-center">
             <div className="flex flex-col gap-2">
               <p className="text-black text-2xl md:text-lg font-bold">Tema da plataforma</p>
               <p className="text-[#DD052B] text-2xl md:text-lg font-bold uppercase">Mahindra Racing</p>
@@ -62,7 +109,6 @@ export const Settings = () => {
             </div>
           </div> */}{" "}
           {/* APLICAR TEMA NA PLATAFORMA PARA SPRINT 4 */}
-        </div>
 
         <div className="flex flex-col gap-5 p-10 max-sm:justify-center max-sm:items-center">
           <FormPersonalInfo />
