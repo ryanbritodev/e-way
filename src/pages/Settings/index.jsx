@@ -34,6 +34,7 @@ export const Settings = () => {
       provider: "google",
       options: {
         scopes: "https://www.googleapis.com/auth/calendar", // Escopo da API Google Calendar
+        redirectTo: "https://the-eway.vercel.app"
       },
     });
     if (error) {
