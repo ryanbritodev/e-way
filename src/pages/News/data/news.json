@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "backgroundImageUrl": "/assets/images/home/batteryTech.png",
+    "backgroundImageUrl": "/assets/images/home/batteryTech.jpeg",
     "partner": "ESPN",
     "newsType": "Tecnologia",
     "title": "Avanços na tecnologia de baterias: como isso afeta a Fórmula E",
@@ -97,7 +97,7 @@
   },
   {
     "id": 9,
-    "backgroundImageUrl": "/assets/images/home/seasonPreview.png",
+    "backgroundImageUrl": "/assets/images/home/seasonPreview.jpeg",
     "partner": "Sky Sports",
     "newsType": "Prévia",
     "title": "Prévia da nova temporada: mudanças de regulamento e suas consequências",
@@ -145,7 +145,7 @@
   },
   {
     "id": 13,
-    "backgroundImageUrl": "/assets/images/home/driverFocus.png",
+    "backgroundImageUrl": "/assets/images/home/driverFocus.jpg",
     "partner": "ESPN",
     "newsType": "Entrevista",
     "title": "Piloto da Porsche fala sobre os desafios da temporada",
@@ -157,7 +157,7 @@
   },
   {
     "id": 14,
-    "backgroundImageUrl": "/assets/images/home/qualifyingResults.png",
+    "backgroundImageUrl": "/assets/images/home/qualifyingResults.jpeg",
     "partner": "Sky Sports",
     "newsType": "Resultados",
     "title": "Resultados da qualificação em Nova York: surpresa nas primeiras posições",
@@ -181,7 +181,7 @@
   },
   {
     "id": 16,
-    "backgroundImageUrl": "/assets/images/home/raceIncidents.png",
+    "backgroundImageUrl": "/assets/images/home/raceIncidents.jpg",
     "partner": "CNN",
     "newsType": "Notícia",
     "title": "Incidentes na pista: análise dos momentos mais tensos da última corrida",
@@ -193,7 +193,7 @@
   },
   {
     "id": 17,
-    "backgroundImageUrl": "/assets/images/home/teamUpdates.png",
+    "backgroundImageUrl": "/assets/images/home/teamUpdates.jpg",
     "partner": "BBC",
     "newsType": "Notícia",
     "title": "Atualizações das equipes: quem trocou de carro e quem ficou para trás",
@@ -217,7 +217,7 @@
   },
   {
     "id": 19,
-    "backgroundImageUrl": "/assets/images/home/energyEfficiency.png",
+    "backgroundImageUrl": "/assets/images/home/energyEfficiency.jpeg",
     "partner": "Sky Sports",
     "newsType": "Tecnologia",
     "title": "Eficiência energética: como as equipes estão otimizando o consumo",
@@ -229,7 +229,7 @@
   },
   {
     "id": 20,
-    "backgroundImageUrl": "/assets/images/home/futureOfFormulaE.png",
+    "backgroundImageUrl": "/assets/images/home/futureOfFormulaE.jpeg",
     "partner": "FOX Sports",
     "newsType": "Futuro",
     "title": "O futuro da Fórmula E: o que esperar da próxima geração de carros elétricos",
