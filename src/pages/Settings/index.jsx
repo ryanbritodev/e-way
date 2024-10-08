@@ -6,28 +6,17 @@ export const Settings = () => {
   const [calendarLinked, setCalendarLinked] = useState(false); // Estado para verificar se o calendário está vinculado
   const session = useSession(); // Sessão atual
   const supabaseClient = useSupabaseClient(); // Comunicação com o Supabase
-  const userCode = "XG11LMN242"; // Código do usuário (pode vir da sessão ou de outra fonte)
-
-  // URL de redirecionamento baseada no ambiente
-  const redirectUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://the-eway.vercel.app/"; // Substitua pelo seu domínio de produção
+  const userCode = "XG11LMN242";
 
   useEffect(() => {
-    // Verificando se o token do Google está disponível na sessão e se o provedor é o Google
-    if (
-      session &&
-      session.provider_token &&
-      session.user.app_metadata.provider === "google"
-    ) {
-      setCalendarLinked(true); // Se tiver o token na sessão atual e o provedor for Google, o calendário está vinculado
+    // Verificando se o token do Google está disponível na sessão
+    if (session && session.provider_token) {
+      setCalendarLinked(true); // Se tiver o token na sessão atual, o calendário vai estar vinculado
     } else {
       setCalendarLinked(false);
     }
   }, [session]);
 
-  // Função para copiar o código do usuário para a área de transferência
   const copyCode = () => {
     navigator.clipboard
       .writeText(userCode)
@@ -44,8 +33,7 @@ export const Settings = () => {
     const { error } = await supabaseClient.auth.signInWithOAuth({
       provider: "google",
       options: {
-        scopes: "https://www.googleapis.com/auth/calendar.events", // Escopo para leitura e escrita de eventos do Google Calendar
-        redirectTo: redirectUrl, // URL para redirecionamento
+        scopes: "https://www.googleapis.com/auth/calendar", // Escopo da API Google Calendar
       },
     });
     if (error) {
@@ -63,17 +51,8 @@ export const Settings = () => {
     } else {
       setCalendarLinked(false); // Atualizando o estado
       alert("Calendário desvinculado com sucesso!");
-      window.location.reload(); // Recarrega a página para limpar sessão e estado
     }
   }
-
-  // Função para fazer logout e limpar o armazenamento local
-  const handleLogout = async () => {
-    await supabaseClient.auth.signOut(); // Faz logout no Supabase
-    localStorage.removeItem("email");
-    localStorage.removeItem("name");
-    window.location.assign("/"); // Redireciona para a página inicial
-  };
 
   return (
     <>
@@ -106,7 +85,7 @@ export const Settings = () => {
             </div>
           </div>
 
-          {/* Verificação para ver se o calendário está vinculado na sessão atual */}
+          {/* Verificação pra ver se o calendário está vinculado na sessão atual */}
           <button
             className="shadow-[0_0_10px_2px_rgba(39,193,184,0.3)] w-full flex justify-center items-center rounded-md font-bold"
             onClick={calendarLinked ? unlinkCalendar : linkCalendar}
@@ -119,11 +98,27 @@ export const Settings = () => {
           </button>
         </div>
 
+        {/* <div className="flex flex-col md:flex-row lg:flex-col gap-2 max-sm:text-center">
+            <div className="flex flex-col gap-2">
+              <p className="text-black text-2xl md:text-lg font-bold">Tema da plataforma</p>
+              <p className="text-[#DD052B] text-2xl md:text-lg font-bold uppercase">Mahindra Racing</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:basis-52 lg:basis-0 w-full items-center gap-2">
+              <div className="rounded-md bg-[#DD052B] w-full h-full">&nbsp;</div>
+              <div className="rounded-md bg-[#333333] w-full h-full">&nbsp;</div>
+            </div>
+          </div> */}{" "}
+          {/* APLICAR TEMA NA PLATAFORMA PARA SPRINT 4 */}
+
         <div className="flex flex-col gap-5 p-10 max-sm:justify-center max-sm:items-center">
           <FormPersonalInfo />
           <button
             className="flex gap-3 items-center justify-center text-red-500 font-bold border-[1px] border-red-500 hover:bg-red-500 hover:text-white transition-all p-2 rounded-md w-32"
-            onClick={handleLogout}
+            onClick={() => {
+              localStorage.removeItem("email");
+              localStorage.removeItem("name");
+              window.location.assign("/");
+            }}
           >
             <svg
               width="29"
