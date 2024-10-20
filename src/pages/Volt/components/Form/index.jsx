@@ -57,9 +57,8 @@ export const Form = ({ setMessages, setIsTyping, isTyping }) => {
         value={value}
         onChange={(event) => setValue(event.target.value)}
         disabled={isTyping}
-        onFocus={!isTyping}
       />
-      <button className="w-[3em] absolute right-3 bg-eblue flex justify-center items-center p-2 px-3 rounded-full">
+      <button className="w-[3em] absolute right-3 bg-eblue flex justify-center items-center p-2 px-3 rounded-full" disabled={isTyping}>
         <img src="/assets/images/voltAi/voltAiArrow.svg" alt="Volt Ai Arrow" />
       </button>
     </form>
