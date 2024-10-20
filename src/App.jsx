@@ -32,31 +32,33 @@ function App() {
             }
           />
           <Route path="/userIn" element={<UserIn />} />
-          <Route
-            path="/news"
-            element={
-              <AppLayout>
-                <NewsPage />
-              </AppLayout>
-            }
-          />
-          <Route
-            path="/racers"
-            element={
-              <AppLayout>
-                <Racers />
-              </AppLayout>
-            }
-          />
-          <Route
-            path="/volt"
-            element={
-              <AppLayout>
-                <Volt />
-              </AppLayout>
-            }
-          />
-          {/* <Route
+          {isAuth && (
+            <>
+              <Route
+                path="/news"
+                element={
+                  <AppLayout>
+                    <NewsPage />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="/racers"
+                element={
+                  <AppLayout>
+                    <Racers />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="/volt"
+                element={
+                  <AppLayout>
+                    <Volt />
+                  </AppLayout>
+                }
+              />
+              {/* <Route
             path="/avatars"
             element={
               <AppLayout>
@@ -64,22 +66,25 @@ function App() {
               </AppLayout>
             }
           /> */}
-          <Route
-            path="/settings"
-            element={
-              <AppLayout>
-                <Settings />
-              </AppLayout>
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <AppLayout>
-                <Profile />
-              </AppLayout>
-            }
-          />
+              <Route
+                path="/settings"
+                element={
+                  <AppLayout>
+                    <Settings />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <AppLayout>
+                    <Profile />
+                  </AppLayout>
+                }
+              />
+            </>
+          )}
+
           <Route path="/*" element={<NotFound />} />
         </Route>
       </Routes>
