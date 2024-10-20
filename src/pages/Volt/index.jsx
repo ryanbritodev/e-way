@@ -24,7 +24,8 @@ export const Volt = () => {
     const container = messagesContainerRef.current;
     if (container) {
       // Se o usuário mover o scroll para cima...
-      const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
+      const isAtBottom =
+        container.scrollHeight - container.scrollTop === container.clientHeight;
       // Desativa o auto-scroll
       setAutoScroll(isAtBottom);
     }
@@ -49,7 +50,11 @@ export const Volt = () => {
               key={`voltChat-${index}`}
               interactor={message.interactor ? message.interactor : "VoltAI"}
               text={message.text}
-              isTyping={isTyping && message.interactor === "VoltAI" && index === messages.length - 1} // Conferindo se a Volt está digitando
+              isTyping={
+                isTyping &&
+                message.interactor === "VoltAI" &&
+                index === messages.length - 1
+              } // Conferindo se a Volt está digitando
             />
           );
         })}
@@ -57,7 +62,12 @@ export const Volt = () => {
         <div ref={messagesEndRef} />
       </section>
 
-      <Form setMessages={setMessages} messages={messages} setIsTyping={setIsTyping} />
+      <Form
+        setMessages={setMessages}
+        messages={messages}
+        setIsTyping={setIsTyping}
+        isTyping={isTyping}
+      />
     </main>
   );
 };
