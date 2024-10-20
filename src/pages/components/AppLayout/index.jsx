@@ -8,21 +8,25 @@ export const AppLayout = ({ children }) => {
       id: 1,
       path: "/",
       imageUrl: "/assets/images/sideBar/homeIcon.svg",
+      confirmExit: false,
     },
     {
       id: 2,
       path: "/news",
       imageUrl: "/assets/images/sideBar/newsIcon.svg",
+      confirmExit: false,
     },
     {
       id: 3,
       path: "/racers",
       imageUrl: "/assets/images/sideBar/racersIcon.svg",
+      confirmExit: false,
     },
     {
       id: 4,
       path: "/volt",
       imageUrl: "/assets/images/sideBar/voltIcon.svg",
+      confirmExit: true,
     },
     // {
     //   path: "/avatars",
@@ -32,6 +36,7 @@ export const AppLayout = ({ children }) => {
       id: 6,
       path: "/settings",
       imageUrl: "/assets/images/sideBar/settingsIcon.svg",
+      confirmExit: false,
     },
   ];
 
@@ -42,7 +47,9 @@ export const AppLayout = ({ children }) => {
           <SideBar links={links} />
           <ProfileButton />
         </BurgerMenu>
-        <div className="w-full h-full max-h-screen pl-1 pt-[2.5em] pb-[2em] pr-[2em] overflow-y-auto overflow-x-hidden scrollbar">{children}</div>
+        <div className="w-full h-full max-h-screen pl-1 pt-[2.5em] pb-[2em] pr-[2em] overflow-y-auto overflow-x-hidden scrollbar">
+          {children}
+        </div>
       </div>
     </div>
   );
