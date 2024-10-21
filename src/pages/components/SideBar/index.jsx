@@ -13,12 +13,16 @@ export const SideBar = ({ links }) => {
 
     const actualLinkNeedsToConfirmExit = links.filter(
       (link) => link.path === pathname
-    )[0].confirmExit;
+    );
+
+    if (actualLinkNeedsToConfirmExit.length == 0) {
+      navigate(link.path);
+    }
 
     const confirmed =
       link.path === pathname
         ? false
-        : actualLinkNeedsToConfirmExit
+        : actualLinkNeedsToConfirmExit[0].confirmExit
         ? window.confirm(
             "Tem certeza que quer sair da página atual? Alguns dados da página podem se perder."
           )
