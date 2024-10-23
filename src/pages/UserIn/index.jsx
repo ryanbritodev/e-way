@@ -40,7 +40,7 @@ export const UserIn = () => {
 
       try {
         const request = await axios.post(
-          "https://eway-api.onrender.com/users/login",
+          process.env.VITE_API_URL + "/users/login",
           {
             email: data.emailLogin,
             password: data.passwordLogin,
@@ -73,7 +73,7 @@ export const UserIn = () => {
 
       try {
         const req = await axios.post(
-          "https://eway-api.onrender.com/users/register",
+          process.env.VITE_API_URL + "/users/register",
           {
             name: data.nameRegister,
             email: data.emailRegister,
