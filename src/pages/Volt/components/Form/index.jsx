@@ -1,23 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { callGeminiApi } from "../../api";
+import { checkAuthToken } from "../../../../auth";
 
 export const Form = ({ setMessages, setIsTyping, isTyping }) => {
   const [value, setValue] = useState("");
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    checkAuthToken().then((res) => {
+      setUser(res.data.user);
+    });
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const userMessage = {
-      interactor: localStorage.getItem("name"),
+      interactor: await user?.userName,
       text: value,
     };
+
+    localStorage.setItem("name", await user?.userName);
 
     // Adiciona a última mensagem do usuário ao histórico
     setMessages((prevValue) => [...prevValue, userMessage]);
     setValue("");
 
     // Chama a API do Gemini e aguarda até ele retornar a resposta
-    const aiResponse = await callGeminiApi(value);
+    const aiResponse = await callGeminiApi(value, user);
 
     // Atualiza a resposta da VoltAI de forma gradual
     const aiMessage = { interactor: "VoltAI", text: "" };
@@ -58,7 +68,10 @@ export const Form = ({ setMessages, setIsTyping, isTyping }) => {
         onChange={(event) => setValue(event.target.value)}
         disabled={isTyping}
       />
-      <button className="w-[3em] absolute right-3 bg-eblue flex justify-center items-center p-2 px-3 rounded-full" disabled={isTyping}>
+      <button
+        className="w-[3em] absolute right-3 bg-eblue flex justify-center items-center p-2 px-3 rounded-full"
+        disabled={isTyping}
+      >
         <img src="/assets/images/voltAi/voltAiArrow.svg" alt="Volt Ai Arrow" />
       </button>
     </form>

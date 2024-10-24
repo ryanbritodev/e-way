@@ -1,18 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { NextRaceCalendar } from "./components/NextRaceCalendar";
 import { News } from "../components/News";
+import { checkAuthToken } from "../../auth";
 
 export const Home = () => {
-    const [buttonText, setButtonText] = useState("Adicionar ao calendário");
-    const session = useSession();
+  const [buttonText, setButtonText] = useState("Adicionar ao calendário");
+  const session = useSession();
+  const [user, setUser] = useState(null);
 
-    // Adicionar evento ao Google Calendário
-    async function createRaceCalendarEvent() {
-      if (!session) {
-        alert("Você precisa estar logado para adicionar eventos ao calendário!");
-        return;
-      }
+  useEffect(() => {
+    checkAuthToken().then((res) => {
+      setUser(res.data.user);
+    });
+  }, []);
+
+  localStorage.setItem("name", user?.userName);
+
+  // Adicionar evento ao Google Calendário
+  async function createRaceCalendarEvent() {
+    if (!session) {
+      alert("Você precisa estar logado para adicionar eventos ao calendário!");
+      return;
+    }
 
     const raceEvent = {
       summary: "E-Prix de São Paulo",
@@ -25,25 +35,28 @@ export const Home = () => {
         dateTime: new Date("2024-10-22T12:00:00-03:00").toISOString(),
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       },
-      location: "Av. Sen. Teotônio Vilela, 261 - Interlagos, São Paulo - SP, Brasil",
+      location:
+        "Av. Sen. Teotônio Vilela, 261 - Interlagos, São Paulo - SP, Brasil",
       reminders: {
         useDefault: false,
         overrides: [
-          { method: "email", minutes: 24 * 60 },  // Lembrar por email um dia antes
-          { method: "popup", minutes: 30 },       // Lembrete com um pop-up 30 minutos antes
+          { method: "email", minutes: 24 * 60 }, // Lembrar por email um dia antes
+          { method: "popup", minutes: 30 }, // Lembrete com um pop-up 30 minutos antes
         ],
       },
       status: "confirmed",
-
     };
 
-    await fetch("https://www.googleapis.com/calendar/v3/calendars/primary/events", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + session.provider_token,
-      },
-      body: JSON.stringify(raceEvent),
-    })
+    await fetch(
+      "https://www.googleapis.com/calendar/v3/calendars/primary/events",
+      {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + session.provider_token,
+        },
+        body: JSON.stringify(raceEvent),
+      }
+    )
       .then((data) => data.json())
       .then((data) => {
         console.log(data);
@@ -66,11 +79,16 @@ export const Home = () => {
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl font-bold mb-[.5em]">Próxima corrida</h2>
           <NextRaceCalendar.Root>
-            <NextRaceCalendar.Infos time="em 15 dias" city="São Paulo" country="Brasil" />
-            <NextRaceCalendar.Button 
+            <NextRaceCalendar.Infos
+              time="em 15 dias"
+              city="São Paulo"
+              country="Brasil"
+            />
+            <NextRaceCalendar.Button
               text={buttonText}
               className={`${
-                buttonText === "Adicionada ao calendário" && "bg-eblue-dark cursor-default"
+                buttonText === "Adicionada ao calendário" &&
+                "bg-eblue-dark cursor-default"
               }`}
               onClick={createRaceCalendarEvent}
             />
@@ -82,7 +100,7 @@ export const Home = () => {
           <div className="flex flex-col items-center md:items-start gap-2">
             <h2 className="text-2xl font-bold mb-[.5em]">Sua pontuação</h2>
             <h3 className="text-3xl border border-[#ededed] flex justify-center items-center rounded-[.2em] text-[#303030] cursor-default py-[.2em] px-[.8em]">
-              0 pontos
+              {user?.userScore || 0} pontos
             </h3>
           </div>
 
@@ -93,7 +111,12 @@ export const Home = () => {
               <News.Partner partner="CNN" />
               <News.Type newsType="Notícia" />
               <News.Title title="Mahindra acaba de vencer mais uma, sem dificuldades" />
-              <News.MoreInfos link="/news" text="Ver mais" time="Hoje" target="self" />
+              <News.MoreInfos
+                link="/news"
+                text="Ver mais"
+                time="Hoje"
+                target="self"
+              />
             </News.Root>
           </div>
         </div>

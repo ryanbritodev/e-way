@@ -1,7 +1,7 @@
 import { ArrowLeftRight } from "lucide-react";
 import { InputLabel } from "../components/InputLabel";
 import { useForm } from "react-hook-form";
-import { Header } from "../Landing/components/Header/Header";
+import { Header } from "./components/Header";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { CircularProgress } from "@mui/material";
@@ -40,17 +40,16 @@ export const UserIn = () => {
 
       try {
         const request = await axios.post(
-          "https://eway-api.onrender.com/users/login",
+          import.meta.env.VITE_API_URL + "/users/login",
           {
             email: data.emailLogin,
             password: data.passwordLogin,
-          }
+          },
+          { withCredentials: true }
         );
         setStatus("success");
 
         if (request.status === 200) {
-          localStorage.setItem("name", req.data.name);
-          localStorage.setItem("email", req.data.email);
           alert("Autenticação concluída, seja bem-vindo!");
           window.location.href = "/";
         }
@@ -63,8 +62,12 @@ export const UserIn = () => {
         }
         if (err.status === 404) {
           alert(
-            "Usuário ou senha incorretos, crie uma conta caso ainda não tenha uma!"
+            "Email ou senha incorretos, crie uma conta caso ainda não tenha uma!"
           );
+          return;
+        }
+        if (err.status === 400) {
+          alert("Email e senha são obrigatórios!");
           return;
         }
       }
@@ -73,18 +76,17 @@ export const UserIn = () => {
 
       try {
         const req = await axios.post(
-          "https://eway-api.onrender.com/users/register",
+          import.meta.env.VITE_API_URL + "/users/register",
           {
             name: data.nameRegister,
             email: data.emailRegister,
             password: data.passwordRegister,
-          }
+          },
+          { withCredentials: true }
         );
         setStatus("success");
 
         if (req.status === 201) {
-          localStorage.setItem("name", req.data.name);
-          localStorage.setItem("email", req.data.email);
           alert("Conta criada, seja bem-vindo!");
           window.location.href = "/";
         }

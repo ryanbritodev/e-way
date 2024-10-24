@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Landing } from "./pages/Landing/Landing";
 import { Home } from "./pages/Home";
 import "./index.css";
@@ -11,9 +11,17 @@ import { Settings } from "./pages/Settings";
 import { Profile } from "./pages/Profile";
 import { NotFound } from "./pages/NotFound";
 import { UserIn } from "./pages/UserIn";
+import { useEffect, useState } from "react";
+import { checkAuthToken } from "./auth";
 
 function App() {
-  const isAuth = localStorage.getItem("email");
+  const [isAuth, setIsAuth] = useState(false);
+
+  useEffect(() => {
+    checkAuthToken().then((res) => {
+      setIsAuth(res.status === 200);
+    });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -31,7 +39,18 @@ function App() {
               )
             }
           />
-          <Route path="/userIn" element={<UserIn />} />
+          <Route
+            path="/userIn"
+            element={
+              isAuth ? (
+                <AppLayout>
+                  <Home />
+                </AppLayout>
+              ) : (
+                <UserIn />
+              )
+            }
+          />
           {isAuth && (
             <>
               <Route
