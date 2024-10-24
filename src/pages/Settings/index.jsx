@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { FormPersonalInfo } from "./components/FormPersonalInfo";
+import { checkAuthToken } from "../../auth";
 
 export const Settings = () => {
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    checkAuthToken().then((res) => {
+      setUser(res.data.user);
+    });
+  }, []);
+
   const [calendarLinked, setCalendarLinked] = useState(false); // Estado para verificar se o calendário está vinculado
   const session = useSession(); // Sessão atual
   const supabaseClient = useSupabaseClient(); // Comunicação com o Supabase
-  const userCode = "XG11LMN242";
+  const userCode = user?.userCode || "XG11LMN242";
 
   useEffect(() => {
     // Verificando se o token do Google está disponível na sessão
@@ -97,7 +106,6 @@ export const Settings = () => {
             {calendarLinked ? "Desvincular Calendário" : "Vincular Calendário"}
           </button>
         </div>
-
         {/* <div className="flex flex-col md:flex-row lg:flex-col gap-2 max-sm:text-center">
             <div className="flex flex-col gap-2">
               <p className="text-black text-2xl md:text-lg font-bold">Tema da plataforma</p>
@@ -108,10 +116,9 @@ export const Settings = () => {
               <div className="rounded-md bg-[#333333] w-full h-full">&nbsp;</div>
             </div>
           </div> */}{" "}
-          {/* APLICAR TEMA NA PLATAFORMA PARA SPRINT 4 */}
-
+        {/* APLICAR TEMA NA PLATAFORMA PARA SPRINT 4 */}
         <div className="flex flex-col gap-5 p-10 max-sm:justify-center max-sm:items-center">
-          <FormPersonalInfo />
+          <FormPersonalInfo user={user} />
           <button
             className="flex gap-3 items-center justify-center text-red-500 font-bold border-[1px] border-red-500 hover:bg-red-500 hover:text-white transition-all p-2 rounded-md w-32"
             onClick={() => {
