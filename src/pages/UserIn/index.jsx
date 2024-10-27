@@ -40,7 +40,7 @@ export const UserIn = () => {
 
       try {
         const request = await axios.post(
-          import.meta.env.VITE_API_URL + "/users/login",
+          "/api/users/login",
           {
             email: data.emailLogin,
             password: data.passwordLogin,
@@ -76,7 +76,7 @@ export const UserIn = () => {
 
       try {
         const req = await axios.post(
-          import.meta.env.VITE_API_URL + "/users/register",
+          "/api/users/register",
           {
             name: data.nameRegister,
             email: data.emailRegister,

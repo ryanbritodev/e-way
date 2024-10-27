@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const checkAuthToken = async () => {
-  const req = await axios.get(import.meta.env.VITE_API_URL + "/users/auth", {
+  const req = await axios.get("/api/users/auth", {
     withCredentials: true,
   });
 
