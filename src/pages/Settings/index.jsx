@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { FormPersonalInfo } from "./components/FormPersonalInfo";
 import { checkAuthToken } from "../../auth";
+import axios from "axios";
 
 export const Settings = () => {
   const [user, setUser] = useState("");
@@ -122,8 +123,14 @@ export const Settings = () => {
           <button
             className="flex gap-3 items-center justify-center text-red-500 font-bold border-[1px] border-red-500 hover:bg-red-500 hover:text-white transition-all p-2 rounded-md w-32"
             onClick={() => {
-              localStorage.removeItem("email");
-              localStorage.removeItem("name");
+              axios
+                .post("/api/users/logout", {}, { withCredentials: true })
+                .then((response) => {
+                  return response;
+                })
+                .catch((error) => {
+                  console.error("Error logging out:", error);
+                });
               window.location.assign("/");
             }}
           >
