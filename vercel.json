@@ -6,7 +6,7 @@
     },
     {
       "source": "/api/:path*", 
-      "destination": "${env:VITE_API_URL}/:path*" 
+      "destination": "https://eway-api.onrender.com/:path*" 
     }
   ]
 }
