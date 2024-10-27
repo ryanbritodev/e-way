@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
+      "source": "/api/:path*",
+      "destination": "https://eway-api.onrender.com/:path*"
     },
     {
-      "source": "/api/:path*", 
-      "destination": "https://eway-api.onrender.com/:path*" 
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
